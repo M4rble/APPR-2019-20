@@ -13,6 +13,7 @@ Države bom primerjal glede na:
 - opravila za katera uporabljajo posamezniki internet
 - znanje o uporabi interneta, računalnika in telefona glede na spol in državljanstvo
 - komunikacijo državljanov z oblastmi prek informacijskih tehnologij
+
 Vir za podatke bo v večini https://ec.europa.eu/eurostat/data/database
 
 ## Program
