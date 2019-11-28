@@ -1,4 +1,4 @@
-# Analiza podatkov s programom R, 2019/20
+# Analiza uporabe komunikacijskih in informacijskih tehnologij v Evropi, 2019/20
 
 Repozitorij z gradivi pri predmetu APPR v študijskem letu 2019/20
 
@@ -7,8 +7,13 @@ Repozitorij z gradivi pri predmetu APPR v študijskem letu 2019/20
 
 ## Tematika
 
-Izbrali si boste temo, s katero se bo vaš projekt ukvarjal.
-Tukaj boste napisali, kje ste dobili podatke, ter kakšen je vaš cilj.
+Analiziral bom države Evropske Unije glede na to v kakšni meri in na kakšen način uporabljajo oziroma ne uporabljajo komunikacijskih in informacijskih tehnologij (telefonija, uporaba interneta in računalnika).
+Države bom primerjal glede na:
+- dostop gospodinjstev do interneta (in razlogi zakaj ne dostopajo do njega)
+- opravila za katera uporabljajo posamezniki internet
+- znanje o uporabi interneta, računalnika in telefona glede na spol in državljanstvo
+- komunikacijo državljanov z oblastmi prek informacijskih tehnologij
+Vir za podatke bo v večini https://ec.europa.eu/eurostat/data/database
 
 ## Program
 
