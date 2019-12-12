@@ -2,13 +2,19 @@
 
 Repozitorij z gradivi pri predmetu APPR v študijskem letu 2019/20
 
-* [![Shiny](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/jaanos/APPR-2019-20/master?urlpath=shiny/APPR-2019-20/projekt.Rmd) Shiny
-* [![RStudio](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/jaanos/APPR-2019-20/master?urlpath=rstudio) RStudio
+* * [![Shiny](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/M4rble/APPR-2019-20/master?urlpath=shiny/APPR-2019-20/projekt.Rmd) Shiny
+* [![RStudio](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/M4rble/APPR-2019-20/master?urlpath=rstudio) RStudio
 
 ## Tematika
 
-Izbrali si boste temo, s katero se bo vaš projekt ukvarjal.
-Tukaj boste napisali, kje ste dobili podatke, ter kakšen je vaš cilj.
+Analiziral bom države Evropske Unije glede na to v kakšni meri in na kakšen način uporabljajo oziroma ne uporabljajo komunikacijskih in informacijskih tehnologij (telefonija, uporaba interneta in računalnika).
+Države bom primerjal glede na:
+- dostop gospodinjstev do interneta (in razlogi zakaj ne dostopajo do njega)
+- opravila za katera uporabljajo posamezniki internet
+- znanje o uporabi interneta, računalnika in telefona glede na spol in državljanstvo
+- komunikacijo državljanov z oblastmi prek informacijskih tehnologij
+
+Vir za podatke bo v večini https://ec.europa.eu/eurostat/data/database
 
 ## Program
 
