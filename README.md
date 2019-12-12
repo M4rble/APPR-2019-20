@@ -1,9 +1,15 @@
-# Analiza podatkov s programom R, 2019/20
+# Analiza uporabe komunikacijskih in informacijskih tehnologij v Evropi, 2019/20
 
 Repozitorij z gradivi pri predmetu APPR v študijskem letu 2019/20
 
+<<<<<<< HEAD
 * * [![Shiny](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/M4rble/APPR-2019-20/master?urlpath=shiny/APPR-2019-20/projekt.Rmd) Shiny
 * [![RStudio](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/M4rble/APPR-2019-20/master?urlpath=rstudio) RStudio
+=======
+* [![Shiny](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/M4rble/APPR-2019-20/master?urlpath=shiny/APPR-2019-20/projekt.Rmd) Shiny
+* [![RStudio](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/M4rble/APPR-2019-20/master?urlpath=rstudio) RStudio
+
+>>>>>>> 61c49436117c5793b45e305d86a961ca02e2351c
 
 ## Tematika
 
@@ -15,6 +21,10 @@ Države bom primerjal glede na:
 - komunikacijo državljanov z oblastmi prek informacijskih tehnologij
 
 Vir za podatke bo v večini https://ec.europa.eu/eurostat/data/database
+<<<<<<< HEAD
+=======
+
+>>>>>>> 61c49436117c5793b45e305d86a961ca02e2351c
 
 ## Program
 
