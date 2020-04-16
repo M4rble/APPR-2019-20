@@ -6,7 +6,8 @@ dostop_do_interneta$HHTYP <- NULL
 dostop_do_interneta$delez <- gsub(':', 'ni podatka', dostop_do_interneta$delez)
 dostop_do_interneta$drzava[dostop_do_interneta$drzava == "Germany (until 1990 former territory of the FRG)"] <- "Germany"
 
-                                
+                          
+      
 razlogi_za_ne_dostopanje_do_interneta <- read_csv("podatki/razlogi.csv", col_names=c("razlog", "drzava", 
                                                "leto", "odstotki", "total", "delez"),
                                                skip=1, na="-", locale=locale(encoding="Windows-1250"))
@@ -28,8 +29,28 @@ razlogi_za_ne_dostopanje_do_interneta$drzava[razlogi_za_ne_dostopanje_do_interne
 
                            
                                                
-komunikacija_posameznikov_z_drzavo <- read_csv("podatki/komunikacija_posameznikov_z_drzavo.csv", col_names=c("drzava", 2008:2018),
+komunikacija_posameznikov_z_drzavo <- read_csv("podatki/komunikacija_posameznikov_z_drzavo.csv", 
+                                               col_names=c("leto", "drzava", "INDIC_IS", "UNIT", 
+                                                           "IND_TYPE","delez"),
                                                   skip=1, na="-", locale=locale(encoding="Windows-1250"))
+komunikacija_posameznikov_z_drzavo$INDIC_IS <- NULL
+komunikacija_posameznikov_z_drzavo$UNIT <- NULL
+komunikacija_posameznikov_z_drzavo$IND_TYPE <- NULL
+komunikacija_posameznikov_z_drzavo$delez <- gsub(':', 'ni podatka', komunikacija_posameznikov_z_drzavo$delez)
+komunikacija_posameznikov_z_drzavo$drzava[komunikacija_posameznikov_z_drzavo$drzava == "Germany (until 1990 former territory of the FRG)"] <- "Germany"
 
-namen_uporabe_interneta_za_komunikacijo_z_drzavo <- read_csv("podatki/namen_uporabe_interneta_za_komunikacijo_z_drzavo.csv")
+
+
+
+namen_uporabe_interneta_za_komunikacijo_z_drzavo <- read_csv("podatki/namen_uporabe_interneta_za_komunikacijo_z_drzavo.csv", 
+                                                              col_names=c("namen uporabe", "drzava", 
+                                                              "leto", "UNIT", "IND_TYPE", "delez"),
+                                                   skip=1, na="-", locale=locale(encoding="Windows-1250"))
+namen_uporabe_interneta_za_komunikacijo_z_drzavo$UNIT <- NULL
+namen_uporabe_interneta_za_komunikacijo_z_drzavo$IND_TYPE <- NULL
+namen_uporabe_interneta_za_komunikacijo_z_drzavo$delez <- gsub(':', 'ni podatka', namen_uporabe_interneta_za_komunikacijo_z_drzavo$delez)
+namen_uporabe_interneta_za_komunikacijo_z_drzavo$drzava[namen_uporabe_interneta_za_komunikacijo_z_drzavo$drzava == "Germany (until 1990 former territory of the FRG)"] <- "Germany"
+namen_uporabe_interneta_za_komunikacijo_z_drzavo$`namen uporabe`[namen_uporabe_interneta_za_komunikacijo_z_drzavo$`namen uporabe` == "Internet use: obtaining information from public authorities web sites (last 12 months)"] <- "Pridobivanje podatkov s spletnih strani"
+namen_uporabe_interneta_za_komunikacijo_z_drzavo$`namen uporabe`[namen_uporabe_interneta_za_komunikacijo_z_drzavo$`namen uporabe` == "Internet use: downloading official forms (last 12 months)"] <- "Prenos uradnih obrazcev"
+namen_uporabe_interneta_za_komunikacijo_z_drzavo$`namen uporabe`[namen_uporabe_interneta_za_komunikacijo_z_drzavo$`namen uporabe` == "Internet use: submitting completed forms (last 12 months)"] <- "Oddajanje izpolnjenih obrazcev"
 

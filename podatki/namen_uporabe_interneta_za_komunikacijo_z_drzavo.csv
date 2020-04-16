@@ -1,97 +1,298 @@
-DATAFLOW,freq,ind_type,unit,indic_is,geo,TIME_PERIOD,OBS_VALUE,OBS_FLAG
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,AT,2018,38,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,BE,2018,31,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,BG,2018,9,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,CY,2018,27,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,CZ,2018,26,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,DE,2018,35,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,DK,2018,46,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,EE,2018,48,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,EL,2018,29,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,ES,2018,39,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,FI,2018,67,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,FR,2018,37,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,HR,2018,20,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,HU,2018,38,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,IE,2018,35,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,IS,2018,54,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,IT,2018,17,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,LT,2018,28,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,LU,2018,50,b
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,LV,2018,15,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,MK,2018,8,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,MT,2018,33,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,NL,2018,55,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,NO,2018,67,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,PL,2018,22,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,PT,2018,21,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,RO,2018,5,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,SE,2018,49,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,SI,2018,28,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,SK,2018,24,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,TR,2018,25,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12FM,UK,2018,36,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,AT,2018,56,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,BE,2018,46,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,BG,2018,17,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,CY,2018,39,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,CZ,2018,50,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,DE,2018,56,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,DK,2018,90,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,EE,2018,69,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,EL,2018,47,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,ES,2018,49,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,FI,2018,78,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,FR,2018,46,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,HR,2018,35,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,HU,2018,48,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,IE,2018,42,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,IS,2018,74,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,IT,2018,20,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,LT,2018,46,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,LU,2018,38,b
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,LV,2018,53,u
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,MK,2018,18,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,MT,2018,42,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,NL,2018,77,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,NO,2018,84,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,PL,2018,24,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,PT,2018,36,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,RO,2018,7,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,SE,2018,75,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,SI,2018,49,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,SK,2018,46,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,TR,2018,42,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12IF,UK,2018,47,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,AT,2018,45,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,BE,2018,37,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,BG,2018,9,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,CY,2018,26,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,CZ,2018,26,b
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,DE,2018,19,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,DK,2018,73,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,EE,2018,71,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,EL,2018,24,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,ES,2018,41,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,FI,2018,65,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,FR,2018,59,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,HR,2018,16,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,HU,2018,37,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,IE,2018,49,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,IS,2018,80,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,IT,2018,15,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,LT,2018,41,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,LU,2018,31,b
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,LV,2018,50,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,MK,2018,6,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,MT,2018,23,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,NL,2018,59,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,NO,2018,66,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,PL,2018,25,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,PT,2018,30,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,RO,2018,4,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,SE,2018,74,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,SI,2018,19,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,SK,2018,16,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,TR,2018,30,
-ESTAT:TIN00013(1.0),A,IND_TOTAL,PC_IND,I_IGOV12RT,UK,2018,45,
+"INDIC_IS","GEO","TIME","UNIT","IND_TYPE","Value","Flag and Footnotes"
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Belgium","2010","Percentage of individuals","All Individuals","40",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Belgium","2015","Percentage of individuals","All Individuals","42",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Belgium","2019","Percentage of individuals","All Individuals","45",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Bulgaria","2010","Percentage of individuals","All Individuals","20",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Bulgaria","2015","Percentage of individuals","All Individuals","16",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Bulgaria","2019","Percentage of individuals","All Individuals","20",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Czechia","2010","Percentage of individuals","All Individuals","21",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Czechia","2015","Percentage of individuals","All Individuals","31",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Czechia","2019","Percentage of individuals","All Individuals","52",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Denmark","2010","Percentage of individuals","All Individuals","76",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Denmark","2015","Percentage of individuals","All Individuals","86",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Denmark","2019","Percentage of individuals","All Individuals","89",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Germany (until 1990 former territory of the FRG)","2010","Percentage of individuals","All Individuals","49",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Germany (until 1990 former territory of the FRG)","2015","Percentage of individuals","All Individuals","52",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Germany (until 1990 former territory of the FRG)","2019","Percentage of individuals","All Individuals","58",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Estonia","2010","Percentage of individuals","All Individuals","49",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Estonia","2015","Percentage of individuals","All Individuals","71",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Estonia","2019","Percentage of individuals","All Individuals","69",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Ireland","2010","Percentage of individuals","All Individuals","32",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Ireland","2015","Percentage of individuals","All Individuals","41",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Ireland","2019","Percentage of individuals","All Individuals","46",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Greece","2010","Percentage of individuals","All Individuals","13",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Greece","2015","Percentage of individuals","All Individuals","42",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Greece","2019","Percentage of individuals","All Individuals","49",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Spain","2010","Percentage of individuals","All Individuals","37",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Spain","2015","Percentage of individuals","All Individuals","45",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Spain","2019","Percentage of individuals","All Individuals","49",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","France","2010","Percentage of individuals","All Individuals","48",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","France","2015","Percentage of individuals","All Individuals","44",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","France","2019","Percentage of individuals","All Individuals","48",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Croatia","2010","Percentage of individuals","All Individuals","14",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Croatia","2015","Percentage of individuals","All Individuals","32",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Croatia","2019","Percentage of individuals","All Individuals","29",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Italy","2010","Percentage of individuals","All Individuals","21",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Italy","2015","Percentage of individuals","All Individuals","20",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Italy","2019","Percentage of individuals","All Individuals","19",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Cyprus","2010","Percentage of individuals","All Individuals","24",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Cyprus","2015","Percentage of individuals","All Individuals","31",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Cyprus","2019","Percentage of individuals","All Individuals","48",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Latvia","2010","Percentage of individuals","All Individuals","39",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Latvia","2015","Percentage of individuals","All Individuals","52",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Latvia","2019","Percentage of individuals","All Individuals","58",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Lithuania","2010","Percentage of individuals","All Individuals","21",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Lithuania","2015","Percentage of individuals","All Individuals","42",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Lithuania","2019","Percentage of individuals","All Individuals","49",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Luxembourg","2010","Percentage of individuals","All Individuals","57",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Luxembourg","2015","Percentage of individuals","All Individuals","47",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Luxembourg","2019","Percentage of individuals","All Individuals","32",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Hungary","2010","Percentage of individuals","All Individuals","33",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Hungary","2015","Percentage of individuals","All Individuals","39",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Hungary","2019","Percentage of individuals","All Individuals","50",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Malta","2010","Percentage of individuals","All Individuals","35",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Malta","2015","Percentage of individuals","All Individuals","38",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Malta","2019","Percentage of individuals","All Individuals","43",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Netherlands","2010","Percentage of individuals","All Individuals","61",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Netherlands","2015","Percentage of individuals","All Individuals","71",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Netherlands","2019","Percentage of individuals","All Individuals","76",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Austria","2010","Percentage of individuals","All Individuals","45",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Austria","2015","Percentage of individuals","All Individuals","51",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Austria","2019","Percentage of individuals","All Individuals","59",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Poland","2010","Percentage of individuals","All Individuals","25",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Poland","2015","Percentage of individuals","All Individuals","19",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Poland","2019","Percentage of individuals","All Individuals","25",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Portugal","2010","Percentage of individuals","All Individuals","24",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Portugal","2015","Percentage of individuals","All Individuals","40",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Portugal","2019","Percentage of individuals","All Individuals","35",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Romania","2010","Percentage of individuals","All Individuals","8",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Romania","2015","Percentage of individuals","All Individuals","9",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Romania","2019","Percentage of individuals","All Individuals","9",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Slovenia","2010","Percentage of individuals","All Individuals","44",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Slovenia","2015","Percentage of individuals","All Individuals","41",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Slovenia","2019","Percentage of individuals","All Individuals","45",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Slovakia","2010","Percentage of individuals","All Individuals","48",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Slovakia","2015","Percentage of individuals","All Individuals","44",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Slovakia","2019","Percentage of individuals","All Individuals","47",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Finland","2010","Percentage of individuals","All Individuals","61",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Finland","2015","Percentage of individuals","All Individuals","73",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Finland","2019","Percentage of individuals","All Individuals","84",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Sweden","2010","Percentage of individuals","All Individuals","64",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Sweden","2015","Percentage of individuals","All Individuals","69",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Sweden","2019","Percentage of individuals","All Individuals","79",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","United Kingdom","2010","Percentage of individuals","All Individuals","39",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","United Kingdom","2015","Percentage of individuals","All Individuals","37",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","United Kingdom","2019","Percentage of individuals","All Individuals","43",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Iceland","2010","Percentage of individuals","All Individuals","74",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Iceland","2015","Percentage of individuals","All Individuals",":",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Iceland","2019","Percentage of individuals","All Individuals","68",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Norway","2010","Percentage of individuals","All Individuals","72",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Norway","2015","Percentage of individuals","All Individuals","74",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Norway","2019","Percentage of individuals","All Individuals","80",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","North Macedonia","2010","Percentage of individuals","All Individuals","13",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","North Macedonia","2015","Percentage of individuals","All Individuals","19",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","North Macedonia","2019","Percentage of individuals","All Individuals","19",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Serbia","2010","Percentage of individuals","All Individuals",":",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Serbia","2015","Percentage of individuals","All Individuals","26",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Serbia","2019","Percentage of individuals","All Individuals","27",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Turkey","2010","Percentage of individuals","All Individuals","10",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Turkey","2015","Percentage of individuals","All Individuals","27",""
+"Internet use: obtaining information from public authorities web sites (last 12 months)","Turkey","2019","Percentage of individuals","All Individuals","46",""
+"Internet use: downloading official forms (last 12 months)","Belgium","2010","Percentage of individuals","All Individuals","25",""
+"Internet use: downloading official forms (last 12 months)","Belgium","2015","Percentage of individuals","All Individuals","27",""
+"Internet use: downloading official forms (last 12 months)","Belgium","2019","Percentage of individuals","All Individuals","35",""
+"Internet use: downloading official forms (last 12 months)","Bulgaria","2010","Percentage of individuals","All Individuals","11",""
+"Internet use: downloading official forms (last 12 months)","Bulgaria","2015","Percentage of individuals","All Individuals","13",""
+"Internet use: downloading official forms (last 12 months)","Bulgaria","2019","Percentage of individuals","All Individuals","12",""
+"Internet use: downloading official forms (last 12 months)","Czechia","2010","Percentage of individuals","All Individuals","10",""
+"Internet use: downloading official forms (last 12 months)","Czechia","2015","Percentage of individuals","All Individuals","14",""
+"Internet use: downloading official forms (last 12 months)","Czechia","2019","Percentage of individuals","All Individuals","28",""
+"Internet use: downloading official forms (last 12 months)","Denmark","2010","Percentage of individuals","All Individuals","51",""
+"Internet use: downloading official forms (last 12 months)","Denmark","2015","Percentage of individuals","All Individuals","52",""
+"Internet use: downloading official forms (last 12 months)","Denmark","2019","Percentage of individuals","All Individuals","47",""
+"Internet use: downloading official forms (last 12 months)","Germany (until 1990 former territory of the FRG)","2010","Percentage of individuals","All Individuals","34",""
+"Internet use: downloading official forms (last 12 months)","Germany (until 1990 former territory of the FRG)","2015","Percentage of individuals","All Individuals","32",""
+"Internet use: downloading official forms (last 12 months)","Germany (until 1990 former territory of the FRG)","2019","Percentage of individuals","All Individuals","35",""
+"Internet use: downloading official forms (last 12 months)","Estonia","2010","Percentage of individuals","All Individuals","39",""
+"Internet use: downloading official forms (last 12 months)","Estonia","2015","Percentage of individuals","All Individuals","39",""
+"Internet use: downloading official forms (last 12 months)","Estonia","2019","Percentage of individuals","All Individuals","48",""
+"Internet use: downloading official forms (last 12 months)","Ireland","2010","Percentage of individuals","All Individuals","29",""
+"Internet use: downloading official forms (last 12 months)","Ireland","2015","Percentage of individuals","All Individuals","37",""
+"Internet use: downloading official forms (last 12 months)","Ireland","2019","Percentage of individuals","All Individuals","44",""
+"Internet use: downloading official forms (last 12 months)","Greece","2010","Percentage of individuals","All Individuals","7",""
+"Internet use: downloading official forms (last 12 months)","Greece","2015","Percentage of individuals","All Individuals","24",""
+"Internet use: downloading official forms (last 12 months)","Greece","2019","Percentage of individuals","All Individuals","30",""
+"Internet use: downloading official forms (last 12 months)","Spain","2010","Percentage of individuals","All Individuals","24",""
+"Internet use: downloading official forms (last 12 months)","Spain","2015","Percentage of individuals","All Individuals","34",""
+"Internet use: downloading official forms (last 12 months)","Spain","2019","Percentage of individuals","All Individuals","37",""
+"Internet use: downloading official forms (last 12 months)","France","2010","Percentage of individuals","All Individuals","40",""
+"Internet use: downloading official forms (last 12 months)","France","2015","Percentage of individuals","All Individuals","35",""
+"Internet use: downloading official forms (last 12 months)","France","2019","Percentage of individuals","All Individuals","40",""
+"Internet use: downloading official forms (last 12 months)","Croatia","2010","Percentage of individuals","All Individuals","13",""
+"Internet use: downloading official forms (last 12 months)","Croatia","2015","Percentage of individuals","All Individuals","25",""
+"Internet use: downloading official forms (last 12 months)","Croatia","2019","Percentage of individuals","All Individuals","24",""
+"Internet use: downloading official forms (last 12 months)","Italy","2010","Percentage of individuals","All Individuals","15",""
+"Internet use: downloading official forms (last 12 months)","Italy","2015","Percentage of individuals","All Individuals","17",""
+"Internet use: downloading official forms (last 12 months)","Italy","2019","Percentage of individuals","All Individuals","17",""
+"Internet use: downloading official forms (last 12 months)","Cyprus","2010","Percentage of individuals","All Individuals","19",""
+"Internet use: downloading official forms (last 12 months)","Cyprus","2015","Percentage of individuals","All Individuals","23",""
+"Internet use: downloading official forms (last 12 months)","Cyprus","2019","Percentage of individuals","All Individuals","37",""
+"Internet use: downloading official forms (last 12 months)","Latvia","2010","Percentage of individuals","All Individuals","17",""
+"Internet use: downloading official forms (last 12 months)","Latvia","2015","Percentage of individuals","All Individuals","31",""
+"Internet use: downloading official forms (last 12 months)","Latvia","2019","Percentage of individuals","All Individuals","18",""
+"Internet use: downloading official forms (last 12 months)","Lithuania","2010","Percentage of individuals","All Individuals","17",""
+"Internet use: downloading official forms (last 12 months)","Lithuania","2015","Percentage of individuals","All Individuals","28",""
+"Internet use: downloading official forms (last 12 months)","Lithuania","2019","Percentage of individuals","All Individuals","31",""
+"Internet use: downloading official forms (last 12 months)","Luxembourg","2010","Percentage of individuals","All Individuals","50",""
+"Internet use: downloading official forms (last 12 months)","Luxembourg","2015","Percentage of individuals","All Individuals","60",""
+"Internet use: downloading official forms (last 12 months)","Luxembourg","2019","Percentage of individuals","All Individuals","49",""
+"Internet use: downloading official forms (last 12 months)","Hungary","2010","Percentage of individuals","All Individuals","24",""
+"Internet use: downloading official forms (last 12 months)","Hungary","2015","Percentage of individuals","All Individuals","27",""
+"Internet use: downloading official forms (last 12 months)","Hungary","2019","Percentage of individuals","All Individuals","41",""
+"Internet use: downloading official forms (last 12 months)","Malta","2010","Percentage of individuals","All Individuals","28",""
+"Internet use: downloading official forms (last 12 months)","Malta","2015","Percentage of individuals","All Individuals","33",""
+"Internet use: downloading official forms (last 12 months)","Malta","2019","Percentage of individuals","All Individuals","38",""
+"Internet use: downloading official forms (last 12 months)","Netherlands","2010","Percentage of individuals","All Individuals","44",""
+"Internet use: downloading official forms (last 12 months)","Netherlands","2015","Percentage of individuals","All Individuals","47",""
+"Internet use: downloading official forms (last 12 months)","Netherlands","2019","Percentage of individuals","All Individuals","52",""
+"Internet use: downloading official forms (last 12 months)","Austria","2010","Percentage of individuals","All Individuals","33",""
+"Internet use: downloading official forms (last 12 months)","Austria","2015","Percentage of individuals","All Individuals","34",""
+"Internet use: downloading official forms (last 12 months)","Austria","2019","Percentage of individuals","All Individuals","44",""
+"Internet use: downloading official forms (last 12 months)","Poland","2010","Percentage of individuals","All Individuals","19",""
+"Internet use: downloading official forms (last 12 months)","Poland","2015","Percentage of individuals","All Individuals","17",""
+"Internet use: downloading official forms (last 12 months)","Poland","2019","Percentage of individuals","All Individuals","25",""
+"Internet use: downloading official forms (last 12 months)","Portugal","2010","Percentage of individuals","All Individuals","16",""
+"Internet use: downloading official forms (last 12 months)","Portugal","2015","Percentage of individuals","All Individuals","24",""
+"Internet use: downloading official forms (last 12 months)","Portugal","2019","Percentage of individuals","All Individuals","22",""
+"Internet use: downloading official forms (last 12 months)","Romania","2010","Percentage of individuals","All Individuals","5",""
+"Internet use: downloading official forms (last 12 months)","Romania","2015","Percentage of individuals","All Individuals","5",""
+"Internet use: downloading official forms (last 12 months)","Romania","2019","Percentage of individuals","All Individuals","6",""
+"Internet use: downloading official forms (last 12 months)","Slovenia","2010","Percentage of individuals","All Individuals","29",""
+"Internet use: downloading official forms (last 12 months)","Slovenia","2015","Percentage of individuals","All Individuals","28",""
+"Internet use: downloading official forms (last 12 months)","Slovenia","2019","Percentage of individuals","All Individuals","27",""
+"Internet use: downloading official forms (last 12 months)","Slovakia","2010","Percentage of individuals","All Individuals","35",""
+"Internet use: downloading official forms (last 12 months)","Slovakia","2015","Percentage of individuals","All Individuals","24",""
+"Internet use: downloading official forms (last 12 months)","Slovakia","2019","Percentage of individuals","All Individuals","25",""
+"Internet use: downloading official forms (last 12 months)","Finland","2010","Percentage of individuals","All Individuals","49",""
+"Internet use: downloading official forms (last 12 months)","Finland","2015","Percentage of individuals","All Individuals","62",""
+"Internet use: downloading official forms (last 12 months)","Finland","2019","Percentage of individuals","All Individuals","74",""
+"Internet use: downloading official forms (last 12 months)","Sweden","2010","Percentage of individuals","All Individuals","43",""
+"Internet use: downloading official forms (last 12 months)","Sweden","2015","Percentage of individuals","All Individuals","42",""
+"Internet use: downloading official forms (last 12 months)","Sweden","2019","Percentage of individuals","All Individuals","55","b"
+"Internet use: downloading official forms (last 12 months)","United Kingdom","2010","Percentage of individuals","All Individuals","26",""
+"Internet use: downloading official forms (last 12 months)","United Kingdom","2015","Percentage of individuals","All Individuals","27",""
+"Internet use: downloading official forms (last 12 months)","United Kingdom","2019","Percentage of individuals","All Individuals","41",""
+"Internet use: downloading official forms (last 12 months)","Iceland","2010","Percentage of individuals","All Individuals","61",""
+"Internet use: downloading official forms (last 12 months)","Iceland","2015","Percentage of individuals","All Individuals",":",""
+"Internet use: downloading official forms (last 12 months)","Iceland","2019","Percentage of individuals","All Individuals","50",""
+"Internet use: downloading official forms (last 12 months)","Norway","2010","Percentage of individuals","All Individuals","54",""
+"Internet use: downloading official forms (last 12 months)","Norway","2015","Percentage of individuals","All Individuals","57",""
+"Internet use: downloading official forms (last 12 months)","Norway","2019","Percentage of individuals","All Individuals","65",""
+"Internet use: downloading official forms (last 12 months)","North Macedonia","2010","Percentage of individuals","All Individuals","5",""
+"Internet use: downloading official forms (last 12 months)","North Macedonia","2015","Percentage of individuals","All Individuals","10",""
+"Internet use: downloading official forms (last 12 months)","North Macedonia","2019","Percentage of individuals","All Individuals","10",""
+"Internet use: downloading official forms (last 12 months)","Serbia","2010","Percentage of individuals","All Individuals",":",""
+"Internet use: downloading official forms (last 12 months)","Serbia","2015","Percentage of individuals","All Individuals","12",""
+"Internet use: downloading official forms (last 12 months)","Serbia","2019","Percentage of individuals","All Individuals","17",""
+"Internet use: downloading official forms (last 12 months)","Turkey","2010","Percentage of individuals","All Individuals","5",""
+"Internet use: downloading official forms (last 12 months)","Turkey","2015","Percentage of individuals","All Individuals","13",""
+"Internet use: downloading official forms (last 12 months)","Turkey","2019","Percentage of individuals","All Individuals","29",""
+"Internet use: submitting completed forms (last 12 months)","Belgium","2010","Percentage of individuals","All Individuals","22",""
+"Internet use: submitting completed forms (last 12 months)","Belgium","2015","Percentage of individuals","All Individuals","34",""
+"Internet use: submitting completed forms (last 12 months)","Belgium","2019","Percentage of individuals","All Individuals","40",""
+"Internet use: submitting completed forms (last 12 months)","Bulgaria","2010","Percentage of individuals","All Individuals","8",""
+"Internet use: submitting completed forms (last 12 months)","Bulgaria","2015","Percentage of individuals","All Individuals","9",""
+"Internet use: submitting completed forms (last 12 months)","Bulgaria","2019","Percentage of individuals","All Individuals","10",""
+"Internet use: submitting completed forms (last 12 months)","Czechia","2010","Percentage of individuals","All Individuals","6",""
+"Internet use: submitting completed forms (last 12 months)","Czechia","2015","Percentage of individuals","All Individuals","10",""
+"Internet use: submitting completed forms (last 12 months)","Czechia","2019","Percentage of individuals","All Individuals","25",""
+"Internet use: submitting completed forms (last 12 months)","Denmark","2010","Percentage of individuals","All Individuals","59",""
+"Internet use: submitting completed forms (last 12 months)","Denmark","2015","Percentage of individuals","All Individuals","69",""
+"Internet use: submitting completed forms (last 12 months)","Denmark","2019","Percentage of individuals","All Individuals","74",""
+"Internet use: submitting completed forms (last 12 months)","Germany (until 1990 former territory of the FRG)","2010","Percentage of individuals","All Individuals","23",""
+"Internet use: submitting completed forms (last 12 months)","Germany (until 1990 former territory of the FRG)","2015","Percentage of individuals","All Individuals","17",""
+"Internet use: submitting completed forms (last 12 months)","Germany (until 1990 former territory of the FRG)","2019","Percentage of individuals","All Individuals","21",""
+"Internet use: submitting completed forms (last 12 months)","Estonia","2010","Percentage of individuals","All Individuals","38",""
+"Internet use: submitting completed forms (last 12 months)","Estonia","2015","Percentage of individuals","All Individuals","71",""
+"Internet use: submitting completed forms (last 12 months)","Estonia","2019","Percentage of individuals","All Individuals","74",""
+"Internet use: submitting completed forms (last 12 months)","Ireland","2010","Percentage of individuals","All Individuals","27",""
+"Internet use: submitting completed forms (last 12 months)","Ireland","2015","Percentage of individuals","All Individuals","46",""
+"Internet use: submitting completed forms (last 12 months)","Ireland","2019","Percentage of individuals","All Individuals","55",""
+"Internet use: submitting completed forms (last 12 months)","Greece","2010","Percentage of individuals","All Individuals","7",""
+"Internet use: submitting completed forms (last 12 months)","Greece","2015","Percentage of individuals","All Individuals","25",""
+"Internet use: submitting completed forms (last 12 months)","Greece","2019","Percentage of individuals","All Individuals","28",""
+"Internet use: submitting completed forms (last 12 months)","Spain","2010","Percentage of individuals","All Individuals","16",""
+"Internet use: submitting completed forms (last 12 months)","Spain","2015","Percentage of individuals","All Individuals","30",""
+"Internet use: submitting completed forms (last 12 months)","Spain","2019","Percentage of individuals","All Individuals","47",""
+"Internet use: submitting completed forms (last 12 months)","France","2010","Percentage of individuals","All Individuals","40",""
+"Internet use: submitting completed forms (last 12 months)","France","2015","Percentage of individuals","All Individuals","42",""
+"Internet use: submitting completed forms (last 12 months)","France","2019","Percentage of individuals","All Individuals","64",""
+"Internet use: submitting completed forms (last 12 months)","Croatia","2010","Percentage of individuals","All Individuals","7",""
+"Internet use: submitting completed forms (last 12 months)","Croatia","2015","Percentage of individuals","All Individuals","15",""
+"Internet use: submitting completed forms (last 12 months)","Croatia","2019","Percentage of individuals","All Individuals","19",""
+"Internet use: submitting completed forms (last 12 months)","Italy","2010","Percentage of individuals","All Individuals","7",""
+"Internet use: submitting completed forms (last 12 months)","Italy","2015","Percentage of individuals","All Individuals","12",""
+"Internet use: submitting completed forms (last 12 months)","Italy","2019","Percentage of individuals","All Individuals","14",""
+"Internet use: submitting completed forms (last 12 months)","Cyprus","2010","Percentage of individuals","All Individuals","13",""
+"Internet use: submitting completed forms (last 12 months)","Cyprus","2015","Percentage of individuals","All Individuals","17",""
+"Internet use: submitting completed forms (last 12 months)","Cyprus","2019","Percentage of individuals","All Individuals","34",""
+"Internet use: submitting completed forms (last 12 months)","Latvia","2010","Percentage of individuals","All Individuals","14",""
+"Internet use: submitting completed forms (last 12 months)","Latvia","2015","Percentage of individuals","All Individuals","29",""
+"Internet use: submitting completed forms (last 12 months)","Latvia","2019","Percentage of individuals","All Individuals","56",""
+"Internet use: submitting completed forms (last 12 months)","Lithuania","2010","Percentage of individuals","All Individuals","17",""
+"Internet use: submitting completed forms (last 12 months)","Lithuania","2015","Percentage of individuals","All Individuals","31",""
+"Internet use: submitting completed forms (last 12 months)","Lithuania","2019","Percentage of individuals","All Individuals","43",""
+"Internet use: submitting completed forms (last 12 months)","Luxembourg","2010","Percentage of individuals","All Individuals","23",""
+"Internet use: submitting completed forms (last 12 months)","Luxembourg","2015","Percentage of individuals","All Individuals","35",""
+"Internet use: submitting completed forms (last 12 months)","Luxembourg","2019","Percentage of individuals","All Individuals","36",""
+"Internet use: submitting completed forms (last 12 months)","Hungary","2010","Percentage of individuals","All Individuals","17",""
+"Internet use: submitting completed forms (last 12 months)","Hungary","2015","Percentage of individuals","All Individuals","24",""
+"Internet use: submitting completed forms (last 12 months)","Hungary","2019","Percentage of individuals","All Individuals","39",""
+"Internet use: submitting completed forms (last 12 months)","Malta","2010","Percentage of individuals","All Individuals","15",""
+"Internet use: submitting completed forms (last 12 months)","Malta","2015","Percentage of individuals","All Individuals","22",""
+"Internet use: submitting completed forms (last 12 months)","Malta","2019","Percentage of individuals","All Individuals","28",""
+"Internet use: submitting completed forms (last 12 months)","Netherlands","2010","Percentage of individuals","All Individuals","43",""
+"Internet use: submitting completed forms (last 12 months)","Netherlands","2015","Percentage of individuals","All Individuals","53",""
+"Internet use: submitting completed forms (last 12 months)","Netherlands","2019","Percentage of individuals","All Individuals","58",""
+"Internet use: submitting completed forms (last 12 months)","Austria","2010","Percentage of individuals","All Individuals","20",""
+"Internet use: submitting completed forms (last 12 months)","Austria","2015","Percentage of individuals","All Individuals","31",""
+"Internet use: submitting completed forms (last 12 months)","Austria","2019","Percentage of individuals","All Individuals","47",""
+"Internet use: submitting completed forms (last 12 months)","Poland","2010","Percentage of individuals","All Individuals","10",""
+"Internet use: submitting completed forms (last 12 months)","Poland","2015","Percentage of individuals","All Individuals","16",""
+"Internet use: submitting completed forms (last 12 months)","Poland","2019","Percentage of individuals","All Individuals","31",""
+"Internet use: submitting completed forms (last 12 months)","Portugal","2010","Percentage of individuals","All Individuals","19",""
+"Internet use: submitting completed forms (last 12 months)","Portugal","2015","Percentage of individuals","All Individuals","28",""
+"Internet use: submitting completed forms (last 12 months)","Portugal","2019","Percentage of individuals","All Individuals","30",""
+"Internet use: submitting completed forms (last 12 months)","Romania","2010","Percentage of individuals","All Individuals","4",""
+"Internet use: submitting completed forms (last 12 months)","Romania","2015","Percentage of individuals","All Individuals","5",""
+"Internet use: submitting completed forms (last 12 months)","Romania","2019","Percentage of individuals","All Individuals","6",""
+"Internet use: submitting completed forms (last 12 months)","Slovenia","2010","Percentage of individuals","All Individuals","12",""
+"Internet use: submitting completed forms (last 12 months)","Slovenia","2015","Percentage of individuals","All Individuals","18",""
+"Internet use: submitting completed forms (last 12 months)","Slovenia","2019","Percentage of individuals","All Individuals","21",""
+"Internet use: submitting completed forms (last 12 months)","Slovakia","2010","Percentage of individuals","All Individuals","20",""
+"Internet use: submitting completed forms (last 12 months)","Slovakia","2015","Percentage of individuals","All Individuals","13",""
+"Internet use: submitting completed forms (last 12 months)","Slovakia","2019","Percentage of individuals","All Individuals","18",""
+"Internet use: submitting completed forms (last 12 months)","Finland","2010","Percentage of individuals","All Individuals","39",""
+"Internet use: submitting completed forms (last 12 months)","Finland","2015","Percentage of individuals","All Individuals","58",""
+"Internet use: submitting completed forms (last 12 months)","Finland","2019","Percentage of individuals","All Individuals","72",""
+"Internet use: submitting completed forms (last 12 months)","Sweden","2010","Percentage of individuals","All Individuals","37",""
+"Internet use: submitting completed forms (last 12 months)","Sweden","2015","Percentage of individuals","All Individuals","45",""
+"Internet use: submitting completed forms (last 12 months)","Sweden","2019","Percentage of individuals","All Individuals","77",""
+"Internet use: submitting completed forms (last 12 months)","United Kingdom","2010","Percentage of individuals","All Individuals","23",""
+"Internet use: submitting completed forms (last 12 months)","United Kingdom","2015","Percentage of individuals","All Individuals","32",""
+"Internet use: submitting completed forms (last 12 months)","United Kingdom","2019","Percentage of individuals","All Individuals","51",""
+"Internet use: submitting completed forms (last 12 months)","Iceland","2010","Percentage of individuals","All Individuals","58",""
+"Internet use: submitting completed forms (last 12 months)","Iceland","2015","Percentage of individuals","All Individuals",":",""
+"Internet use: submitting completed forms (last 12 months)","Iceland","2019","Percentage of individuals","All Individuals","80",""
+"Internet use: submitting completed forms (last 12 months)","Norway","2010","Percentage of individuals","All Individuals","49",""
+"Internet use: submitting completed forms (last 12 months)","Norway","2015","Percentage of individuals","All Individuals","58",""
+"Internet use: submitting completed forms (last 12 months)","Norway","2019","Percentage of individuals","All Individuals","68",""
+"Internet use: submitting completed forms (last 12 months)","North Macedonia","2010","Percentage of individuals","All Individuals","3",""
+"Internet use: submitting completed forms (last 12 months)","North Macedonia","2015","Percentage of individuals","All Individuals","8",""
+"Internet use: submitting completed forms (last 12 months)","North Macedonia","2019","Percentage of individuals","All Individuals","10",""
+"Internet use: submitting completed forms (last 12 months)","Serbia","2010","Percentage of individuals","All Individuals",":",""
+"Internet use: submitting completed forms (last 12 months)","Serbia","2015","Percentage of individuals","All Individuals","10",""
+"Internet use: submitting completed forms (last 12 months)","Serbia","2019","Percentage of individuals","All Individuals","13",""
+"Internet use: submitting completed forms (last 12 months)","Turkey","2010","Percentage of individuals","All Individuals","5",""
+"Internet use: submitting completed forms (last 12 months)","Turkey","2015","Percentage of individuals","All Individuals","12",""
+"Internet use: submitting completed forms (last 12 months)","Turkey","2019","Percentage of individuals","All Individuals","36",""
