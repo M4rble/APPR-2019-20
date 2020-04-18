@@ -1,6 +1,6 @@
 ---
-title: "Poročilo pri predmetu Analiza podatkov s programom R"
-author: "Študent FMF"
+title: "Analiza uporabe komunikacijskih in informacijskih tehnologij v Evropi"
+author: "Anže Mramor"
 output:
   html_document: default
   pdf_document:
@@ -26,9 +26,21 @@ source("lib/rstudio.r", encoding="UTF-8")
 
 # Izbira teme
 
-Za vzorec bomo prikazali nekaj podatkov o slovenskih občinah.
+Pri projektu bom analiziral države Evropske unije glede na to v kakšni meri in na kakšen način uporabljajo  komunikacijske in informacijske tehnologije (telefonija, uporaba interneta in računalnika). Države bom primerjal glede na:
+- dostop gospodinjstev do interneta (in razlogi zakaj ne dostopajo do njega)
+- opravila za katera uporabljajo posamezniki internet
+- znanje o uporabi digitalnih in informacijskih tehnologij glede na spol in državljanstvo
+- komunikacijo državljanov z oblastmi prek informacijskih tehnologij
 
-![](slike/grb.png)
+Pri dostopu do interneta bom države prmerjal glede na delež populacije, ki dostopa do interneta, ter ugotovil kako se je ta delež spreminjal v obdobju 2007-2019. Države bom tudi primerjal glede na razloge, zaradi katerih državljani niso dostopali do interneta in naredil primerjavo spreminjajna deležev pri posameznem razlogu v letih 2006, 2010, 2015 in 2019.
+
+Pri opravilih za uporabljanje interneta bom države primerjal glede na dejavnosti za katere so uporabljali internet, ter primerjal spremembe teh deležev v letih 2006, 2010, 2015 in 2019.
+
+Pri analizi znanja uporabe digitalnih in informacijskih tehnologij bom države primerjal glede na znanje uporabe njenih državljanov, podatke pa bom ločil na celotno populacijo (16-74 let), na moške in na ženske (enako starostno obdobje), ter primerjal deleže znanja v letih 2015 in 2019.
+
+Nazadnje bom analiziral uporabo informacijskih tehnologij za komunikacijo z državo, ter primerjal deleže po  državah v obdobju 2008-2019. Poleg tega bom razčlenil deleže komunikacije z državo glede na aktivnosti v letih 2010, 2015 in 2019.
+
+Za vir podatkov bom uporabil Eurostat (https://ec.europa.eu/eurostat/data/database).
 
 ***
 
@@ -38,33 +50,43 @@ Za vzorec bomo prikazali nekaj podatkov o slovenskih občinah.
 source("uvoz/uvoz.r", encoding="UTF-8")
 ```
 
-Uvozili smo podatke o občinah v obliki CSV s statističnega urada ter v obliki HTML
-z Wikipedije. Podatke imamo v dveh razpredelnicah v obliki *tidy data*.
+Uvozil sem podatke o uporabi komunikacijskih in informacijskih tehnologij v obliki CSV iz Evrostata. Podatke imam v šestih razpredelnicah v obliki *tidy data*.
 
-1. `druzine` - podatki o družinah za vsako občino
-  - `obcina` - spremenljivka: ime občine (neurejen faktor),
-  - `velikost.druzine` - spremenljivka: število otrok v družini (število: 1, 2, 3 ali 4, kjer zadnja vrednost pomeni 4 ali več),
-  - `stevilo.druzin` - meritev: število družin z ustreznim številom otrok v ustrezni občini (število).
+1. 'dostop_do_interneta' - podatki o deležih populacije države, ki dostopa do interneta
+  - 'leto' - spremenljivka: leto meritve (2007-2019)
+  - 'drzava' - spremenljivka: država, v kateri gledamo meritev
+  - 'delez' - meritev: delež državljanov z dostopom do interneta
+  
+2. 'razlogi_za_nedostopanje_do_interneta' - podatki o razlogih državljanov posamezne države za nedostopanje do interneta in deleži populacije posamezne države
+  - 'razlog' - spremenljivka: razlog za nedostopanje do interneta
+  - 'drzava' - spremenljivka: država, v kateri gledamo meritev
+  - 'leto' - spremenljivka: leto meritve (2006, 2010, 2015, 2019)
+  - 'delez' - meritev: delež državljanov, ki zaradi danega razloga ne dostopa do interneta
+  
+3. 'internetne_aktivnosti' - podatki o aktivnostih za katere državljani posamezne države uporabljajo internet
+  - 'uporaba' - spremenljivka: aktivnost, za katero uporabljajo internet
+  - 'drzava' - spremenljivka: država, v kateri gledamo meritev
+  - 'leto' - spremenljivka: leto meritve (2006, 2010, 2015, 2019)
+  - 'delez' - meritev: delež državljanov, ki uporabljajo internet za dano aktivnost
+  
+4. 'digitalno_znanje' - podatki o znanju uporabe digitalnih in informacijskih tehnologij državljanov posamezne države, glede na spol
+  - 'nivo.znanja' - spremenljivka: kakšen nivo znanja imajo (nizek, osnoven, nadpovprečen, nimajo znanja)
+  - 'drzava' - spremenljivka: država, v kateri gledamo meritev
+  - 'leto' - spremenljivka: leto meritve (2015 in 2019)
+  - 'skupina' - spremenljivka: katero skupino obravnavamo (celotna populacija, moški, ženske (vsi 16-74 let))
+  - 'delez' - meritev: delež državljanov določene skupine, ki imajo določen nivo znanja o uporabi tehnologije
+ 
+5. 'komunikacija_posameznikov_z_drzavo' - podatki o deležu državljanov, ki uporabljajo informacijske tehnologije za komuniciranje z državo (oblastmi)
+  - 'leto' - spremenljivka: leto meritve (2008-2019)
+  - 'drzava' - spremenljivka: država, v kateri gledamo meritev
+  - 'delez' - meritev: delež državljanov, ki z državo komunicira preko informacijskih tehnologij
+ 
+6. 'namen_uporabe_interneta_za_komunikacijo_z_drzavo' - podatki o namenih komuniciranja z državo, za katere državljani uporabljajo informacijske tehnologije
+  - 'namen.uporabe' - spremenljivka: namen za uporabljanje interneta za komunikacijo z državo
+  - 'drzava' - spremenljivka: država, v kateri gledamo meritev
+  - 'leto' - spremenljivka: leto meritve (2010, 2015, 2019)
+  - 'delez' - meritev: delež državljanov, ki z državo komunicira z danim namenom
 
-2. `obcine` - podatki o občinah
-  - `obcina` - spremenljivka: ime občine (neurejen faktor),
-  - `povrsina` - meritev: površina občine v km$^2$ (število),
-  - `prebivalci` - meritev: prebivalstvo občine (število),
-  - `gostota` - meritev: število prebivalcev na km$^2$ (število),
-  - `naselja` - meritev: število naselij v občini (število),
-  - `ustanovitev` - meritev: leto ustanovitve občine (število),
-  - `pokrajina` - meritev: pokrajina, ki ji občina pripada (neurejen faktor),
-  - `regija` - meritev: regija, ki ji občina pripada (neurejen faktor),
-  - `odcepitev` - meritev: podatki o občinah, od katerih se je občina odcepila (besedilo).
-
-**Opomba**: da bi razpredelnica `obcine` res bila v obliki *tidy data*, bi morali odstraniti stolpec `gostota` (saj je izpeljan iz stolpcev `povrsina` in `prebivalci`), podatke o pokrajinah pa bi morali premakniti v drugo razpredelnico, saj nekatere občine pripadajo dvema pokrajinama. Podobno bi morali narediti tudi s stolpcem `odcepitev`.
-
-Spodnji graf prikazuje porazdelitev števila naselij v občinah.
-
-```{r histogram, echo=FALSE, message=FALSE, fig.align='center', fig.cap='Histogram števila naselij v občinah'}
-ggplot(obcine, aes(x=naselja)) + geom_histogram() +
-  ggtitle("Pogostost števila naselij") + xlab("Število naselij") + ylab("Število občin")
-```
 
 ***
 

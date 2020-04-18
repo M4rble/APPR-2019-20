@@ -7,7 +7,7 @@ Repozitorij z gradivi pri predmetu APPR v študijskem letu 2019/20
 
 ## Tematika
 
-Analiziral bom države Evropske Unije glede na to v kakšni meri in na kakšen način uporabljajo oziroma ne uporabljajo komunikacijskih in informacijskih tehnologij (telefonija, uporaba interneta in računalnika).
+Analiziral bom države Evropske unije glede na to v kakšni meri in na kakšen način uporabljajo oziroma ne uporabljajo komunikacijskih in informacijskih tehnologij (telefonija, uporaba interneta in računalnika).
 Države bom primerjal glede na:
 - dostop gospodinjstev do interneta (in razlogi zakaj ne dostopajo do njega)
 - opravila za katera uporabljajo posamezniki internet
