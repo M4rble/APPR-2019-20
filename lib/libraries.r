@@ -6,6 +6,15 @@ library(shiny)
 library(readr)
 library(dplyr)
 library(rgdal)
+library(markdown)
+library(DT)
+library(rgeos)
+library(digest)
+library(ggplot2)
+library(mosaic)
+library(maptools)
+library(extrafont)
+
 
 options(gsubfn.engine="R")
 
