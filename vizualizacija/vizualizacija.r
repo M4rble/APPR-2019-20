@@ -3,21 +3,21 @@
 #slovar imen držav
 slovar <- c("Belgium" = "Belgija",
             "Bulgaria" = "Bolgarija",
-            "Czechia" = "Ceska",
+            "Czechia" = "Češka",
             "Denmark" = "Danska",
-            "Germany" = "Nemcija",
+            "Germany" = "Nemčija",
             "Estonia" = "Estonija",
             "Ireland" = "Irska",
-            "Greece" = "Grcija",
-            "Spain" = "Spanija",
+            "Greece" = "Grčija",
+            "Spain" = "Španija",
             "France" = "Francija",
-            "Croatia" = "Hrvaska",
+            "Croatia" = "Hrvaška",
             "Italy" = "Italija",
             "Cyprus" = "Ciper",
             "Latvia" = "Latvija",
             "Lithuania" = "Litva",
             "Luxembourg" = "Luksemburg",
-            "Hungary" = "Madzarska",
+            "Hungary" = "Madžarska",
             "Malta" = "Malta",
             "Netherlands" = "Nizozemska",
             "Austria" = "Avstrija",
@@ -25,15 +25,15 @@ slovar <- c("Belgium" = "Belgija",
             "Portugal" = "Portugalska",
             "Romania" = "Romunija",
             "Slovenia" = "Slovenija",
-            "Slovakia" = "Slovaska",
+            "Slovakia" = "Slovaška",
             "Finland" = "Finska",
-            "Sweden" = "Svedska",
-            "United Kingdom" = "Zdruzeno kraljestvo (Velika Britanija)",
+            "Sweden" = "Švedska",
+            "United Kingdom" = "Združeno kraljestvo (Velika Britanija)",
             "Iceland" = "Islandija",
-            "Norway" = "Norveska",
+            "Norway" = "Norveška",
             "North Macedonia" = "Severna Makedonija",
             "Serbia" = "Srbija",
-            "Turkey" = "Turcija")
+            "Turkey" = "Turčija")
 
 
 # Uvozimo zemljevid.
@@ -46,9 +46,21 @@ slovar <- c("Belgium" = "Belgija",
 
 #################################################################################
 
+#uvoz vseh potrebnih datotek v obliki tidy data
 
-graf1 <- ggplot(data=dostop_do_interneta, aes(x=leto, y=delez, col=drzava)) + geom_line()
+source("uvoz/uvoz_podatkov.r", encoding="UTF-8")
 
+graf1 <- ggplot(data=dostop_do_interneta, aes(x=leto, y=delez, col=drzava)) + geom_line() + 
+         ylab('delež v %') + ggtitle('Dostop do interneta') + scale_x_continuous(breaks = 1*2007:2019) + 
+         labs(fill = "Država")
+
+povprecni_delez_dostopa <- dostop_do_interneta %>% 
+      group_by(drzava) %>%
+      summarise(povprecje = mean(delez, na.rm = TRUE))
+povprecni_delez_dostopa$povprecje <- round(povprecni_delez_dostopa$povprecje, 2)
+
+graf1_2 <- ggplot(data=povprecni_delez_dostopa, aes(x=drzava)) + geom_histogram() + 
+           ylab('povprečje v %') + xlab('Države') + ggtitle('Povprečen delež dostopanja do interneta')
 
 
 
