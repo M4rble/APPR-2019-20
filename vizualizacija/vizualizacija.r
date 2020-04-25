@@ -59,9 +59,9 @@ povprecni_delez_dostopa <- dostop_do_interneta %>%
       summarise(povprecje = mean(delez, na.rm = TRUE))
 povprecni_delez_dostopa$povprecje <- round(povprecni_delez_dostopa$povprecje, 2)
 
-graf1_2 <- ggplot(data=povprecni_delez_dostopa, aes(x=drzava)) + geom_histogram() + 
-           ylab('povprečje v %') + xlab('Države') + ggtitle('Povprečen delež dostopanja do interneta')
-
+graf1a <- ggplot(data=povprecni_delez_dostopa, aes(x=drzava, y=povprecje, fill=drzava)) + 
+          geom_col() + coord_cartesian(ylim = c(40, 100)) +
+          ylab('povprečje v %') + xlab('Države') + ggtitle('Povprečen delež dostopanja do interneta')
 
 
 
