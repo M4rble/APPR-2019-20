@@ -49,9 +49,6 @@ Za vir podatkov bom uporabil Eurostat (https://ec.europa.eu/eurostat/data/databa
 ```{r uvoz, echo=FALSE, message=FALSE}
 source("uvoz/uvoz_podatkov.r", encoding="UTF-8")
 ```
-```{r vizualizacija, echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
-source("vizualizacija/vizualizacija.r", encoding="UTF-8")
-```
 
 Uvozil sem podatke o uporabi komunikacijskih in informacijskih tehnologij v obliki CSV iz Evrostata. Podatke imam v šestih razpredelnicah v obliki *tidy data*.
 
@@ -95,8 +92,9 @@ Uvozil sem podatke o uporabi komunikacijskih in informacijskih tehnologij v obli
 
 # Analiza in vizualizacija podatkov
 
-
-print(graf1)
+```{r vizualizacija, echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
+source("vizualizacija/vizualizacija.r", encoding="UTF-8")
+```
 
 Spodnji zemljevid prikazuje povprečno velikost družine za vsako občino.
 
