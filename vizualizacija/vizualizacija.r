@@ -73,25 +73,69 @@ primerjava_rasti <- dostop_do_interneta %>%
 
 graf1b <- ggplot(data=primerjava_rasti, aes(x=leto, y=delez, col=drzava)) + geom_line() + 
           ylab('delež v %') + ggtitle('Primerjava rasti držav z največjo in najmanjšo rastjo') +
-          scale_x_continuous(breaks = 1*2007:2019) +labs(fill = "Država")
+          scale_x_continuous(breaks = 1*2007:2019) + labs(fill = "Država")
 
 povprecen_delez_razloga <- razlogi_za_ne_dostopanje_do_interneta %>%
-                           group_by(razlog) %>%
-                           summarise(sum(delez, na.rm = TRUE) / 132)
-names(povprecen_delez_razloga)[names(povprecen_delez_razloga) == "sum(delez, na.rm = TRUE)/132"] <- "delez"
+                            group_by(razlog) %>%
+                            summarise(mean(delez, na.rm = TRUE))
+names(povprecen_delez_razloga)[names(povprecen_delez_razloga) == "mean(delez, na.rm = TRUE)"] <- "delez"
 povprecen_delez_razloga$delez <- round(povprecen_delez_razloga$delez, 2)
+
+graf2a <- ggplot(data=povprecen_delez_razloga, aes(x=razlog, y=delez, fill=razlog)) + geom_col() +
+          ggtitle('Povprečen delež razlogov za nedostopanje do interneta') + 
+          ylab('delež v %') + xlab('razlog') + theme(axis.text.x = element_blank())
 
 razlogi_po_letih <- razlogi_za_ne_dostopanje_do_interneta %>%
                     filter(razlog %in% c("nepotreben", "pomanjkanje spretnosti", "predraga oprema")) %>%
                     group_by(leto, razlog) %>%
-                    summarise(sum(delez, na.rm = TRUE) / 33)
-names(razlogi_po_letih)[names(razlogi_po_letih) == "sum(delez, na.rm = TRUE)/33"] <- "delez"
+                    summarise(mean(delez, na.rm = TRUE))
+names(razlogi_po_letih)[names(razlogi_po_letih) == "mean(delez, na.rm = TRUE)"] <- "delez"
 razlogi_po_letih$delez <- round(razlogi_po_letih$delez, 2)
 
-#graf2a <- ggplot(data=razlogi_po_letih, aes(x=))
+graf2b <- ggplot(data=razlogi_po_letih, aes(x=razlog)) + geom_col(aes(y=delez, fill=leto)) +
+          ggtitle('Delež glavnih razlogov za nedostopanje do interneta po letih') + 
+          ylab('deleži v %') + xlab('razlogi')
+
+#razlogi_po_drzavah_v_letu_2019 <- razlogi_za_ne_dostopanje_do_interneta %>%
+#                                  group_by(drzava, razlog) %>%
+#                                  summarise(max(delez, na.rm = TRUE))
+# graf 2c bomo vidli še kaj bo
 
 
+povprecen_delez_aktivnosti <- internetne_aktivnosti %>%
+                              group_by(uporaba) %>%
+                              summarise(mean(delez, na.rm = TRUE))
+names(povprecen_delez_aktivnosti)[names(povprecen_delez_aktivnosti) == "mean(delez, na.rm = TRUE)"] <- "delez"
+povprecen_delez_aktivnosti$delez <- round(povprecen_delez_aktivnosti$delez, 2)
 
+graf3a <- ggplot(data=povprecen_delez_aktivnosti, aes(x=uporaba, y=delez, fill=uporaba)) + geom_col() +
+          ggtitle('Povprečen delež internetnih aktivnosti') + 
+          ylab('delež v %') + xlab('aktivnost') + theme(axis.text.x = element_blank())
+
+aktivnosti_po_letih <- internetne_aktivnosti %>%
+                       filter(uporaba %in% c("branje novic", "posiljanje/prejemanje e-poste", 
+                                            "poslusanje glasbe", 
+                                            "pridobivanje informacij o proizvodih in storitvah",
+                                            "uporaba aplikacij za izmenjavo sporocil (npr Messenger)",
+                                            "uporaba socialnih omrezij")) %>%
+                                            group_by(leto, uporaba) %>%
+                                            summarise(mean(delez, na.rm = TRUE))
+names(aktivnosti_po_letih)[names(aktivnosti_po_letih) == "mean(delez, na.rm = TRUE)"] <- "delez"
+aktivnosti_po_letih$delez <- round(aktivnosti_po_letih$delez, 2)
+aktivnosti_po_letih$delez[aktivnosti_po_letih$delez == "NaN"] <- "0"
+
+#POPRAVI ŠE
+graf3b <- ggplot(data=aktivnosti_po_letih, aes(x=uporaba)) + geom_col(aes(y=delez, fill=leto)) +
+          ggtitle('Delež glavnih aktivnosti pri uporabi interneta') + 
+          ylab('deleži v %') + xlab('aktivnost') 
+
+#graf3c bomo vidl kaj bo, kot pri 2c
+
+povprecno_znanje_drzav_po_letih <- digitalno_znanje %>%
+                                   group_by(nivo.znanja, leto) %>%
+                                   filter (skupina == "skupno posamezniki") %>%
+                                   summarise(delez = mean(delez, na.rm = TRUE))
+povprecno_znanje_drzav_po_letih$delez <- round(povprecno_znanje_drzav_po_letih$delez, 2)
 
 
 
