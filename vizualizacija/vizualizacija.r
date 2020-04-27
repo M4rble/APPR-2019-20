@@ -125,7 +125,7 @@ aktivnosti_po_letih$delez <- round(aktivnosti_po_letih$delez, 2)
 aktivnosti_po_letih$delez[aktivnosti_po_letih$delez == "NaN"] <- "0"
 
 #POPRAVI ŠE
-graf3b <- ggplot(data=aktivnosti_po_letih, aes(x=uporaba)) + geom_col(aes(y=delez, fill=leto)) +
+graf3b <- ggplot(data=aktivnosti_po_letih, aes(x=uporaba, y=delez, fill=leto)) + geom_col() +
           ggtitle('Delež glavnih aktivnosti pri uporabi interneta') + 
           ylab('deleži v %') + xlab('aktivnost') 
 
@@ -133,12 +133,27 @@ graf3b <- ggplot(data=aktivnosti_po_letih, aes(x=uporaba)) + geom_col(aes(y=dele
 
 povprecno_znanje_drzav_po_letih <- digitalno_znanje %>%
                                    group_by(nivo.znanja, leto) %>%
-                                   filter (skupina == "skupno posamezniki") %>%
+                                   filter(skupina == "skupno posamezniki") %>%
                                    summarise(delez = mean(delez, na.rm = TRUE))
 povprecno_znanje_drzav_po_letih$delez <- round(povprecno_znanje_drzav_po_letih$delez, 2)
 
+graf4a <- ggplot(data=povprecno_znanje_drzav_po_letih, aes(x=nivo.znanja, y=delez, fill=leto)) + 
+          geom_col(position = "dodge2") + ggtitle('Povprečna raven znanja državljanov EU po letih') + 
+          ylab('deleži v %') + xlab('nivo znanja')
 
-
+znanje_moskih <- digitalno_znanje %>%
+                 group_by(nivo.znanja, leto) %>%
+                 filter(skupina == "moski (16-74 let)") %>%
+                 summarise(povprecje_moskih = mean(delez, na.rm = TRUE))
+znanje_moskih$povprecje_moskih <- round(znanje_moskih$povprecje_moskih, 2)
+names(znanje_moskih)[names(znanje_moskih) == "povprecje_moskih"] <- "povprecje moskih"
+znanje_zensk <- digitalno_znanje %>%
+                group_by(nivo.znanja, leto) %>%
+                filter(skupina == "zenske (16-74 let)") %>%
+                summarise(povprecje_zensk = mean(delez, na.rm = TRUE))
+znanje_zensk$povprecje_zensk <- round(znanje_zensk$povprecje_zensk, 2)
+names(znanje_zensk)[names(znanje_zensk) == "povprecje_zensk"] <- "povprecje zensk"
+primerjava_znanja_moskih_in_zensk <- merge(znanje_moskih, znanje_zensk)
 
 
 

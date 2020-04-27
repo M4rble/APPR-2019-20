@@ -52,7 +52,7 @@ internetne_aktivnosti$uporaba[internetne_aktivnosti$uporaba == "Internet use: se
 internetne_aktivnosti$uporaba[internetne_aktivnosti$uporaba == "Internet use: job search or sending an application"] <- "iskanje sluzbe in oddajanje prijav"
 internetne_aktivnosti$uporaba[internetne_aktivnosti$uporaba == "Internet use: seeking health information"] <- "iskanje zdravstvenih informacij"
 internetne_aktivnosti$uporaba[internetne_aktivnosti$uporaba == "Internet use: taking part in on-line consultations or voting to define civic or political issues (e.g. urban planning, signing a petition)"] <- "internetno politicno udejstvovanje (npr podpisovanje peticij)"
-internetne_aktivnosti$uporaba[internetne_aktivnosti$uporaba == "Internet use: posting opinions on civic or political issues via websites (e.g. blogs, social networks, etc."] <- "objavljanje politicnih mnenj na spletnih straneh"
+internetne_aktivnosti$uporaba[internetne_aktivnosti$uporaba == "Internet use: posting opinions on civic or political issues via websites (e.g. blogs, social networks, etc.)"] <- "objavljanje politicnih mnenj na spletnih straneh"
 internetne_aktivnosti$uporaba[internetne_aktivnosti$uporaba == "Internet use: civic or political participation"] <- "splosno drzavljansko ali politicno sodelovanje"
 internetne_aktivnosti$uporaba[internetne_aktivnosti$uporaba == "Internet use: online learning material"] <- "dostop do snovi za ucenje"
 internetne_aktivnosti$uporaba[internetne_aktivnosti$uporaba == "Internet use: communicating with instructors or students using educational websites/portals"] <- "instrukcije"
