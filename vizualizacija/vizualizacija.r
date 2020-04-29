@@ -37,6 +37,21 @@ slovar <- c("Belgium" = "Belgija",
 
 #################################################################################
 
+
+
+#zemljevid <- uvozi.zemljevid(
+#  "http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/cultural/ne_50m_admin_0_countries.zip", "ne_50m_admin_0_countries", encoding="UTF-8")
+#zemljevid <- zemljevid[zemljevid$CONTINENT == "Europe",]
+#zemljevid <- zemljevid[zemljevid$SOVEREIGNT != "Russia",]
+#zemljevid$sovereignt <- factor(zemljevid$sovereignt, levels=levels(povprecni_delez_dostopa$drzava))
+#tm_shape(merge(zemljevid,
+#               povprecni_delez_dostopa %>% group_by(drzava),
+#               by.x="SOVEREIGNT", by.y="drzava")) +
+#  tm_polygons("povprecni_delez_dostopa") + ggtitle("Tekme brez prejetega zadetka, glede na države")
+
+
+
+
 # Uvozimo zemljevid.
 #zemljevid <- uvozi.zemljevid("https://image.jimcdn.com/app/cms/image/transf/dimension=257x10000:format=jpg/path/s0001777a9ca986dd/image/i4678e93b523e2dc5/version/1426076888/image.jpg", "OB",
 #                             pot.zemljevida="OB", encoding="Windows-1250")
@@ -76,9 +91,6 @@ graf1b <- ggplot(data=primerjava_rasti, aes(x=leto, y=delez, col=drzava)) +
           geom_point() + geom_line() + 
           ylab('delež v %') + ggtitle('Primerjava rasti držav z največjo in najmanjšo rastjo') +
           scale_x_continuous(breaks = 1*2007:2019) + labs(fill = "Država")
-
-data("World")
-evropa <- tm_shape(World) + tm_polygons("dostop_do_interneta")
 
 ##################################################################################################
 
