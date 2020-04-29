@@ -14,6 +14,7 @@ library(ggplot2)
 library(mosaic)
 library(maptools)
 library(extrafont)
+library(tmap)
 
 
 options(gsubfn.engine="R")
