@@ -37,28 +37,11 @@ slovar <- c("Belgium" = "Belgija",
 
 #################################################################################
 
+#Uvozimo zemljevid
 
-
-#zemljevid <- uvozi.zemljevid(
-#  "http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/cultural/ne_50m_admin_0_countries.zip", "ne_50m_admin_0_countries", encoding="UTF-8")
-#zemljevid <- zemljevid[zemljevid$CONTINENT == "Europe",]
-#zemljevid <- zemljevid[zemljevid$SOVEREIGNT != "Russia",]
-#zemljevid$sovereignt <- factor(zemljevid$sovereignt, levels=levels(povprecni_delez_dostopa$drzava))
-#tm_shape(merge(zemljevid,
-#               povprecni_delez_dostopa %>% group_by(drzava),
-#               by.x="SOVEREIGNT", by.y="drzava")) +
-#  tm_polygons("povprecni_delez_dostopa") + ggtitle("Tekme brez prejetega zadetka, glede na države")
-
-
-
-
-# Uvozimo zemljevid.
-#zemljevid <- uvozi.zemljevid("https://image.jimcdn.com/app/cms/image/transf/dimension=257x10000:format=jpg/path/s0001777a9ca986dd/image/i4678e93b523e2dc5/version/1426076888/image.jpg", "OB",
-#                             pot.zemljevida="OB", encoding="Windows-1250")
-#levels(zemljevid$OB_UIME) <- levels(zemljevid$OB_UIME) %>%
-#  { gsub("Slovenskih", "Slov.", .) } %>% { gsub("-", " - ", .) }
-#zemljevid$OB_UIME <- factor(zemljevid$OB_UIME, levels=levels(obcine$obcina))
-#zemljevid <- fortify(zemljevid)
+zemljevid <- uvozi.zemljevid(
+  "http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/cultural/ne_50m_admin_0_countries.zip", "ne_50m_admin_0_countries", encoding="UTF-8")
+zemljevid <- zemljevid[zemljevid$CONTINENT == "Europe",]
 
 #################################################################################
 
@@ -66,7 +49,7 @@ slovar <- c("Belgium" = "Belgija",
 
 source("uvoz/uvoz_podatkov.r", encoding="UTF-8")
 
-graf1 <- ggplot(data=dostop_do_interneta, aes(x=leto, y=delez, col=drzava)) + 
+graf1 <- ggplot(data=dostop_do_interneta %>% mutate(drzava=slovar[drzava]), aes(x=leto, y=delez, col=drzava)) + 
          geom_point() + geom_line() + 
          ylab('delež v %') + ggtitle('Dostop do interneta') + scale_x_continuous(breaks = 1*2007:2019) + 
          labs(fill = "Država")
@@ -76,16 +59,22 @@ povprecni_delez_dostopa <- dostop_do_interneta %>%
                            summarise(povprecje = mean(delez, na.rm = TRUE))
 povprecni_delez_dostopa$povprecje <- round(povprecni_delez_dostopa$povprecje, 2)
 
-graf1a <- ggplot(data=povprecni_delez_dostopa, aes(x=drzava, y=povprecje, fill=drzava)) + 
+graf1a <- ggplot(data=povprecni_delez_dostopa %>% mutate(drzava=slovar[drzava]), aes(x=drzava, y=povprecje, fill=drzava)) + 
           geom_col() + coord_cartesian(ylim = c(40, 100)) + ggtitle('Povprečen delež dostopanja do interneta') +
           ylab('povprečje v %') + xlab('Države') + theme(axis.text.x = element_blank())
+
+zemljevid1 <- tm_shape(merge(zemljevid,
+                             povprecni_delez_dostopa %>% group_by(drzava),
+                             by.x="SOVEREIGNT", by.y="drzava"), xlim=c(-25,32), ylim=c(32,72)) +
+              tm_polygons("povprecje") + 
+              tm_layout(main.title = "Povprečni deleži dostopanja do interneta držav EU")
 
 najvecja_rast <- dostop_do_interneta %>%
                  group_by(drzava) %>%
                  summarise(razlika = (max(delez, na.rm = TRUE) - min(delez, na.rm = TRUE)))
-primerjava_rasti <- dostop_do_interneta %>% 
+primerjava_rasti <- dostop_do_interneta %>%
                     filter(drzava %in% c("Islandija", "Nizozemska", "Norveška",
-                                         "Bolgarija", "Turčija", "Grčija")) 
+                                         "Bolgarija", "Turčija", "Grčija"))
 
 graf1b <- ggplot(data=primerjava_rasti, aes(x=leto, y=delez, col=drzava)) + 
           geom_point() + geom_line() + 
@@ -110,12 +99,12 @@ razlogi_po_letih <- razlogi_za_ne_dostopanje_do_interneta %>%
                     summarise(mean(delez, na.rm = TRUE))
 names(razlogi_po_letih)[names(razlogi_po_letih) == "mean(delez, na.rm = TRUE)"] <- "delez"
 razlogi_po_letih$delez <- round(razlogi_po_letih$delez, 2)
+razlogi_po_letih$leto <- as.character(razlogi_po_letih$leto)
 
 graf2b <- ggplot(data=razlogi_po_letih, aes(x=razlog)) + 
           geom_col(aes(y=delez, fill=leto), position = "dodge2") +
           ggtitle('Delež glavnih razlogov za nedostopanje do interneta po letih') + 
           ylab('deleži v %') + xlab('razlogi')
-#uredi legendo
 
 razlogi_po_drzavah_v_letu_2019 <- razlogi_za_ne_dostopanje_do_interneta %>%
                                   group_by(drzava) %>%
@@ -131,6 +120,7 @@ razlogi_po_drzavah_v_letu_2019$razlog[razlogi_po_drzavah_v_letu_2019$razlog == "
 graf2c <- ggplot(data=razlogi_po_drzavah_v_letu_2019, aes(x=razlog)) + geom_bar(aes(fill=drzava)) +
           ggtitle('Najpogostejši razlogi za nedostopanje do interneta po državah') + 
           ylab('število držav') + xlab('razlog')
+
 
 #########################################################################################
 
@@ -155,11 +145,11 @@ aktivnosti_po_letih <- internetne_aktivnosti %>%
 names(aktivnosti_po_letih)[names(aktivnosti_po_letih) == "mean(delez, na.rm = TRUE)"] <- "delez"
 aktivnosti_po_letih$delez <- round(aktivnosti_po_letih$delez, 2)
 aktivnosti_po_letih$delez[aktivnosti_po_letih$delez == "NaN"] <- "0"
+aktivnosti_po_letih$leto <- as.character(aktivnosti_po_letih$leto)
 
 graf3b <- ggplot(data=aktivnosti_po_letih, aes(x=uporaba, y=delez, fill=leto)) + 
           geom_col(position = "dodge2") + ggtitle('Delež glavnih aktivnosti pri uporabi interneta') + 
           ylab('deleži v %') + xlab('aktivnost')
-#uredi legendo
 
 aktivnosti_po_drzavah_v_letu_2019 <- internetne_aktivnosti %>%
                                      group_by(drzava) %>%
@@ -175,9 +165,15 @@ aktivnosti_po_drzavah_v_letu_2019$aktivnost[aktivnosti_po_drzavah_v_letu_2019$ak
 aktivnosti_po_drzavah_v_letu_2019$aktivnost[aktivnosti_po_drzavah_v_letu_2019$aktivnost == "8"] <- "internetno bancnistvo"
 aktivnosti_po_drzavah_v_letu_2019$aktivnost[aktivnosti_po_drzavah_v_letu_2019$aktivnost == "18"] <- "uporaba aplikacij za izmenjavi sporocil (npr Messenger)"
 
-graf3c <- ggplot(data=aktivnosti_po_drzavah_v_letu_2019, aes(x=aktivnost)) + geom_bar(aes(fill=drzava)) +
+graf3c <- ggplot(data=aktivnosti_po_drzavah_v_letu_2019 %>% mutate(drzava=slovar[drzava]), aes(x=aktivnost)) + geom_bar(aes(fill=drzava)) +
           ggtitle('Najpogostejši razlogi za uporabo interneta po državah') + 
           ylab('število držav') + xlab('razlog')
+
+zemljevid2 <- tm_shape(merge(zemljevid,
+                             aktivnosti_po_drzavah_v_letu_2019 %>% group_by(drzava),
+                             by.x="SOVEREIGNT", by.y="drzava"), xlim=c(-25,32), ylim=c(32,72)) +
+              tm_polygons("aktivnost", palette = "Pastel1") + 
+              tm_layout(main.title = "Najpogostejši razlogi za uporabo interneta")
 
 #####################################################################################################
 
@@ -186,11 +182,11 @@ povprecno_znanje_drzav_po_letih <- digitalno_znanje %>%
                                    filter(skupina == "skupno posamezniki") %>%
                                    summarise(delez = mean(delez, na.rm = TRUE))
 povprecno_znanje_drzav_po_letih$delez <- round(povprecno_znanje_drzav_po_letih$delez, 2)
+povprecno_znanje_drzav_po_letih$leto <- as.character(povprecno_znanje_drzav_po_letih$leto)
 
 graf4a <- ggplot(data=povprecno_znanje_drzav_po_letih, aes(x=nivo.znanja, y=delez, fill=leto)) + 
           geom_col(position = "dodge2") + ggtitle('Povprečna raven znanja državljanov EU po letih') + 
           ylab('deleži v %') + xlab('nivo znanja')
-#uredi legendo
 
 moski=c('moski')
 znanje_moskih <- digitalno_znanje %>%
@@ -212,7 +208,6 @@ primerjava_znanja_moskih_in_zensk$leto <- NULL
 graf4b <- ggplot(data=primerjava_znanja_moskih_in_zensk, aes(x=nivo.znanja, y=povprecje, fill=spol)) + 
           geom_col(position = "dodge2") + ggtitle('Povprečna raven znanja državljanov EU po spolu') + 
           ylab('deleži v %') + xlab('nivo znanja')
-#zakaj je kle legenda uredu, pr unih pa ni?
 
 drzave_po_znanju <- digitalno_znanje %>%
                     group_by(drzava, leto) %>%
@@ -222,11 +217,11 @@ drzave_po_znanju$skupina <- NULL
 primerjava_znanja_drzav <- drzave_po_znanju %>%
                            filter(drzava %in% c("Islandija", "Norveška", "Nizozemska", "Romunija", "Bolgarija", "Severna Makedonija"))
 primerjava_znanja_drzav[is.na(primerjava_znanja_drzav)] <- 0
+primerjava_znanja_drzav$leto <- as.character(primerjava_znanja_drzav$leto)
 
 graf4c <- ggplot(data=primerjava_znanja_drzav, aes(x=drzava, y=delez, fill=leto)) +
           geom_col(position = "dodge2") + ggtitle('Primerjava znanja državljanov najboljših in najslabših držav EU') + 
           ylab('deleži v %') + xlab('država')
-#uredi legendo
 
 #######################################################################################################
 
@@ -274,12 +269,12 @@ nameni_po_letih <- namen_uporabe_interneta_za_komunikacijo_z_drzavo %>%
                    summarise(mean(delez, na.rm = TRUE))
 names(nameni_po_letih)[names(nameni_po_letih) == "mean(delez, na.rm = TRUE)"] <- "delez"
 nameni_po_letih$delez <- round(nameni_po_letih$delez, 2)
+nameni_po_letih$leto <- as.character(nameni_po_letih$leto)
 
 graf6b <- ggplot(data=nameni_po_letih, aes(x=namen.uporabe)) + 
           geom_col(aes(y=delez, fill=leto), position = "dodge2") +
           ggtitle('Delež glavnih namenov za komunikacijo z državo') + 
           ylab('deleži v %') + xlab('namen uporabe')
-#uredi legendo
 
 nameni_po_drzavah_v_letu_2019 <-  namen_uporabe_interneta_za_komunikacijo_z_drzavo %>%
                                   group_by(drzava) %>%
@@ -291,8 +286,14 @@ nameni_po_drzavah_v_letu_2019$namen[nameni_po_drzavah_v_letu_2019$namen == "2"] 
 nameni_po_drzavah_v_letu_2019$namen[nameni_po_drzavah_v_letu_2019$namen == "3"] <- "Oddajanje izpolnjenih obrazcev"
 
 
-graf6c <- ggplot(data=nameni_po_drzavah_v_letu_2019, aes(x=namen)) + geom_bar(aes(fill=drzava)) +
-          ggtitle('Najpogostejši nameni za komuniciranje državo prek interneta') + 
+graf6c <- ggplot(data=nameni_po_drzavah_v_letu_2019 %>% mutate(drzava=slovar[drzava]), aes(x=namen)) + geom_bar(aes(fill=drzava)) +
+          ggtitle('Najpogostejši nameni za komuniciranje z državo prek interneta') + 
           ylab('število držav') + xlab('namen')
+
+zemljevid3 <- tm_shape(merge(zemljevid,
+                             nameni_po_drzavah_v_letu_2019 %>% group_by(drzava),
+                             by.x="SOVEREIGNT", by.y="drzava"), xlim=c(-25,32), ylim=c(32,72)) +
+              tm_polygons("namen", palette = "Pastel1") + 
+              tm_layout(main.title = "Najpogostejši nameni za komuniciranje z državo")
 
 ################################################################################################

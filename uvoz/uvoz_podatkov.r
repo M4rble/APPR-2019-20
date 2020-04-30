@@ -10,7 +10,7 @@ dostop_do_interneta <- read_csv("podatki/dostop_do_interneta.csv",
 dostop_do_interneta$UNIT <- NULL
 dostop_do_interneta$HHTYP <- NULL
 dostop_do_interneta$drzava[dostop_do_interneta$drzava == "Germany (until 1990 former territory of the FRG)"] <- "Germany"
-dostop_do_interneta <- dostop_do_interneta %>% mutate(drzava=slovar[drzava])
+#dostop_do_interneta <- dostop_do_interneta %>% mutate(drzava=slovar[drzava])
 
 
 
@@ -59,7 +59,7 @@ internetne_aktivnosti$uporaba[internetne_aktivnosti$uporaba == "Internet use: co
 internetne_aktivnosti$uporaba[internetne_aktivnosti$uporaba == "Internet use: any of the learning activities i_iuolc, i_iuolm, i_iuocis"] <- "druge izobrazevalne aktivnosti"
 internetne_aktivnosti$uporaba[internetne_aktivnosti$uporaba == "Internet use: instant messaging, i.e. exchanging messages, for example, via Skype, Messenger, WhatsApp, Viber"] <- "uporaba aplikacij za izmenjavi sporocil (npr Messenger)"
 internetne_aktivnosti$uporaba[internetne_aktivnosti$uporaba == "Internet use: listening to music (e.g. w eb radio, music streaming)"] <- "poslusanje glasbe"
-internetne_aktivnosti <- internetne_aktivnosti %>% mutate(drzava=slovar[drzava])                                
+#internetne_aktivnosti <- internetne_aktivnosti %>% mutate(drzava=slovar[drzava])                                
 
 
 digitalno_znanje <- read_csv("podatki/digitalno_znanje.csv", 
@@ -98,7 +98,7 @@ namen_uporabe_interneta_za_komunikacijo_z_drzavo$drzava[namen_uporabe_interneta_
 namen_uporabe_interneta_za_komunikacijo_z_drzavo$`namen.uporabe`[namen_uporabe_interneta_za_komunikacijo_z_drzavo$`namen.uporabe` == "Internet use: obtaining information from public authorities web sites (last 12 months)"] <- "Pridobivanje podatkov s spletnih strani"
 namen_uporabe_interneta_za_komunikacijo_z_drzavo$`namen.uporabe`[namen_uporabe_interneta_za_komunikacijo_z_drzavo$`namen.uporabe` == "Internet use: downloading official forms (last 12 months)"] <- "Prenos uradnih obrazcev"
 namen_uporabe_interneta_za_komunikacijo_z_drzavo$`namen.uporabe`[namen_uporabe_interneta_za_komunikacijo_z_drzavo$`namen.uporabe` == "Internet use: submitting completed forms (last 12 months)"] <- "Oddajanje izpolnjenih obrazcev"
-namen_uporabe_interneta_za_komunikacijo_z_drzavo <- namen_uporabe_interneta_za_komunikacijo_z_drzavo %>% mutate(drzava=slovar[drzava])
+#namen_uporabe_interneta_za_komunikacijo_z_drzavo <- namen_uporabe_interneta_za_komunikacijo_z_drzavo %>% mutate(drzava=slovar[drzava])
 
 
 
