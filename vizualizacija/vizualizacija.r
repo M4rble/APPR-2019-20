@@ -72,7 +72,7 @@ zemljevid1 <- tm_shape(merge(zemljevid,
 najvecja_rast <- dostop_do_interneta %>%
                  group_by(drzava) %>%
                  summarise(razlika = (max(delez, na.rm = TRUE) - min(delez, na.rm = TRUE)))
-primerjava_rasti <- dostop_do_interneta %>%
+primerjava_rasti <- dostop_do_interneta %>% mutate(drzava=slovar[drzava]) %>%
                     filter(drzava %in% c("Islandija", "Nizozemska", "Norveška",
                                          "Bolgarija", "Turčija", "Grčija"))
 
