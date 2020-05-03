@@ -45,10 +45,6 @@ zemljevid <- zemljevid[zemljevid$CONTINENT == "Europe",]
 
 #################################################################################
 
-#uvoz vseh potrebnih datotek v obliki tidy data
-
-source("uvoz/uvoz_podatkov.r", encoding="UTF-8")
-
 graf1 <- ggplot(data=dostop_do_interneta %>% mutate(drzava=slovar[drzava]), aes(x=leto, y=delez, col=drzava)) + 
          geom_point() + geom_line() + 
          ylab('delež v %') + ggtitle('Dostop do interneta') + scale_x_continuous(breaks = 1*2007:2019) + 

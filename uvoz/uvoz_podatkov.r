@@ -2,7 +2,6 @@
 
 
 #uvoz vseh potrebnih knjiznic
-source("lib/libraries.r", encoding="UTF-8")
 
 dostop_do_interneta <- read_csv("podatki/dostop_do_interneta.csv", 
                                 col_names=c("leto", "drzava", "UNIT" ,"HHTYP","delez"),

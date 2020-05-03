@@ -15,6 +15,7 @@ library(mosaic)
 library(maptools)
 library(extrafont)
 library(tmap)
+library(scales)
 
 
 options(gsubfn.engine="R")
