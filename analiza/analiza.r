@@ -17,7 +17,7 @@ pr <- predict(model7, data.frame(leto=seq.int(2020, 2025, 1)))
 napoved_rasti <- data.frame(leto = c(2020, 2021, 2022, 2023, 2024, 2025), rast = c(pr[1], pr[2], pr[3], pr[4], pr[5], pr[6]))
 
 primerjava_rasti_isl <- primerjava_rasti %>% filter(drzava == "Islandija")
-model7i <- lm(delez~leto, data=primerjava_rasti_isl)
+model7i <- lm(log(delez)~leto, data=primerjava_rasti_isl)
 pri <- predict(model7, data.frame(leto=seq.int(2020, 2025, 1)))
 napoved_rasti_i <- data.frame(leto = c(2020, 2021, 2022, 2023, 2024, 2025), rast = c(pri[1], pri[2], pri[3], pri[4], pri[5], pri[6]))
 
