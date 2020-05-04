@@ -1,7 +1,41 @@
 # 2. faza: Uvoz podatkov
 
+#slovar imen držav
+slovar <- c("Belgium" = "Belgija",
+            "Bulgaria" = "Bolgarija",
+            "Czechia" = "Češka",
+            "Denmark" = "Danska",
+            "Germany" = "Nemčija",
+            "Estonia" = "Estonija",
+            "Ireland" = "Irska",
+            "Greece" = "Grčija",
+            "Spain" = "Španija",
+            "France" = "Francija",
+            "Croatia" = "Hrvaška",
+            "Italy" = "Italija",
+            "Cyprus" = "Ciper",
+            "Latvia" = "Latvija",
+            "Lithuania" = "Litva",
+            "Luxembourg" = "Luksemburg",
+            "Hungary" = "Madžarska",
+            "Malta" = "Malta",
+            "Netherlands" = "Nizozemska",
+            "Austria" = "Avstrija",
+            "Poland" = "Poljska",
+            "Portugal" = "Portugalska",
+            "Romania" = "Romunija",
+            "Slovenia" = "Slovenija",
+            "Slovakia" = "Slovaška",
+            "Finland" = "Finska",
+            "Sweden" = "Švedska",
+            "United Kingdom" = "Združeno kraljestvo (Velika Britanija)",
+            "Iceland" = "Islandija",
+            "Norway" = "Norveška",
+            "North Macedonia" = "Severna Makedonija",
+            "Serbia" = "Srbija",
+            "Turkey" = "Turčija")
 
-#uvoz vseh potrebnih knjiznic
+########################################################################################
 
 dostop_do_interneta <- read_csv("podatki/dostop_do_interneta.csv", 
                                 col_names=c("leto", "drzava", "UNIT" ,"HHTYP","delez"),
