@@ -34,19 +34,23 @@ source("vizualizacija/vizualizacija.r", encoding="UTF-8")
 
 # Izbira teme
 
-Pri projektu bom analiziral države Evropske unije glede na to v kakšni meri in na kakšen način uporabljajo  komunikacijske in informacijske tehnologije (telefonija, uporaba interneta in računalnika). Države bom primerjal glede na:
+Pri projektu bom analiziral evropske države glede na to v kolikšni meri in na kakšen način uporabljajo  komunikacijske in informacijske tehnologije (telefonija, uporaba interneta in računalnika). Države bom primerjal glede na:
+
 - dostop gospodinjstev do interneta (in razlogi zakaj ne dostopajo do njega)
-- opravila za katera uporabljajo posamezniki internet
+
+- aktivnosti za katera uporabljajo posamezniki internet
+
 - znanje o uporabi digitalnih in informacijskih tehnologij glede na spol in državljanstvo
+
 - komunikacijo državljanov z oblastmi prek informacijskih tehnologij
 
 Pri dostopu do interneta bom države prmerjal glede na delež populacije, ki dostopa do interneta, ter ugotovil kako se je ta delež spreminjal v obdobju 2007-2019. Države bom tudi primerjal glede na razloge, zaradi katerih državljani niso dostopali do interneta in naredil primerjavo spreminjajna deležev pri posameznem razlogu v letih 2006, 2010, 2015 in 2019.
 
-Pri opravilih za uporabljanje interneta bom države primerjal glede na dejavnosti za katere so uporabljali internet, ter primerjal spremembe teh deležev v letih 2006, 2010, 2015 in 2019.
+Pri aktivnostih za uporabljanje interneta bom države primerjal glede na dejavnosti za katere so uporabljali internet, ter primerjal spremembe teh deležev v letih 2006, 2010, 2015 in 2019.
 
 Pri analizi znanja uporabe digitalnih in informacijskih tehnologij bom države primerjal glede na znanje uporabe njenih državljanov, podatke pa bom ločil na celotno populacijo (16-74 let), na moške in na ženske (enako starostno obdobje), ter primerjal deleže znanja v letih 2015 in 2019.
 
-Nazadnje bom analiziral uporabo informacijskih tehnologij za komunikacijo z državo, ter primerjal deleže po  državah v obdobju 2008-2019. Poleg tega bom razčlenil deleže komunikacije z državo glede na aktivnosti v letih 2010, 2015 in 2019.
+Nazadnje bom analiziral uporabo informacijskih tehnologij za komunikacijo z državo, ter primerjal deleže po  državah v obdobju 2008-2019. Poleg tega bom razčlenil deleže komunikacije z državo glede na načine komuniciranja v letih 2010, 2015 in 2019.
 
 Za vir podatkov bom uporabil Eurostat (https://ec.europa.eu/eurostat/data/database).
 
@@ -55,7 +59,7 @@ Za vir podatkov bom uporabil Eurostat (https://ec.europa.eu/eurostat/data/databa
 
 # Obdelava, uvoz in čiščenje podatkov
 
-Uvozil sem podatke o uporabi komunikacijskih in informacijskih tehnologij v obliki CSV iz Evrostata. Podatke imam v šestih razpredelnicah v obliki *tidy data*.
+Uvozil sem podatke o uporabi komunikacijskih in informacijskih tehnologij v obliki CSV iz Eurostata. Podatke imam v šestih razpredelnicah v obliki *tidy data*.
 
 1. `dostop_do_interneta` - podatki o deležih populacije države, ki dostopa do interneta
   - `leto` - spremenljivka: leto meritve (2007-2019)
@@ -101,10 +105,12 @@ Uvozil sem podatke o uporabi komunikacijskih in informacijskih tehnologij v obli
 source("analiza/analiza.r", encoding="UTF-8")
 ```
 
-Spodnji grafi prikazujejo analizo in primerjavo evropskih držav glede na uporabo komunikacijskih in informacijskih tehnologij, ločeno glede na dostop do interneta, uporabo interneta, znanje o uporabi komunikacijskih in digitalnih tehnologij, ter komunikacijo z državo.
-če kakšna vrednost med podatki ni na voljo (`NA`) potem je na grafu njena privzeta vrednost 0.
+## (Ne)dostopanje do interneta
 
-Najprej sem se lotil analize držav glede na dostop do interneta. Spodnji graf prikazuje spreminjanje deleža populacije, ki je v obdobju 2007 do 2019 dostopala do interneta.
+Spodnji grafi prikazujejo analizo in primerjavo evropskih držav glede na uporabo komunikacijskih in informacijskih tehnologij, ločeno glede na dostop do interneta, uporabo interneta, znanje o uporabi komunikacijskih in digitalnih tehnologij, ter komunikacijo z državo.
+Če kakšna vrednost med podatki ni na voljo (`NA`) potem je na grafu njena privzeta vrednost 0.
+
+Najprej sem se lotil analize držav glede na dostop do interneta. Spodnji graf prikazuje spreminjanje deleža populacije, ki je v obdobju od 2007 do 2019 dostopala do interneta.
 
 ```{r grafi_dostopanje, echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, results='hide'}
 #graf dostopanja do interneta vseh držav
@@ -120,7 +126,7 @@ print(graf7)
 ```
 
 Kot je razvidno iz zgornjega grafa, so države, ki so imele v obdobju najmanjšo rast začele obdobje z največjim deležem dostopanja interneta in ga tam tudi končale. Največjo rast izmed vseh evropskih držav je dosegla Turčija, ki je v dobrem desetletju uspela dostop zagotoviti skoraj 70 % prebivalcem. 
-Vsekakor je jasno, da se evropske države zelo hitro digitalizirajo, uporaba interneta je v porastu, dostop imajo skoraj vsi skoraj povsod, ta delež pa se bo verjetno v naslednjih letih le še povečeval in bi lahko v naslednjem desetleju dosegel 100 % v večini evropskih držav.
+Vsekakor je jasno, da se evropske države zelo hitro digitalizirajo, uporaba interneta je v porastu, dostop imajo skoraj vsi, skoraj povsod, ta delež pa se bo verjetno v naslednjih letih le še povečeval in bi lahko v naslednjem desetleju dosegel 100 % v večini evropskih držav.
 Napovedi za prihodnost rasti držav, si lahko ogledamo v spodnjem grafu, ki nam napoveduje rast držav z največjo rastjo opazovanega obdobja do leta 2025. 
 
 ```{r grafi_dostopanje3, echo=FALSE, fig.align='center',message=FALSE, warning=FALSE, results='hide'}
@@ -128,19 +134,19 @@ Napovedi za prihodnost rasti držav, si lahko ogledamo v spodnjem grafu, ki nam 
 print(graf7a)
 ```
 
-Iz grafa lahko opazimo, da bo rast držav še vedno precej konstantno naraščala, vendar bo na neki točki začel njen naklon padati, kar je logično, saj bo vsako leto težje zagotoviti dostop do interneta vsem oziroma tistim, ki ga če nimajo - njihove rasti bodo postale podobne državam, ki imajo danes skoraj 100 % delež dostopanja. Lahko trdimo, da bi glede na dane napovedi lahko do leta 2030 imelo dostop do interneta več kot 95 % prebivalcev evropskih držav.
+Iz grafa lahko opazimo, da bo rast držav še vedno precej konstantno naraščala, vendar bo na neki točki začel njen naklon padati, kar je logično, saj bo vsako leto težje zagotoviti dostop do interneta vsem oziroma tistim, ki ga če nimajo - njihove rasti bodo postale podobne državam, ki imajo danes skoraj 100 % delež dostopanja. Lahko pa trdimo, da bi, glede na dane napovedi, lahko do leta 2030 imelo dostop do interneta več kot 95 % prebivalcev evropskih držav.
 
 Spodnji zemljevid pa prikazuje povprečne deleže dostopanja do interneta evropskih držav v opazovanem obdobju.
 
-```{r zemljevid1, echo=FALSE, fig.align='center', fig.cap='Zemljevid deležev dostopanja do interneta po državah', message=FALSE, warning=FALSE, results='hide'}
+```{r zemljevid1, echo=FALSE, fig.align='center', fig.cap='Zemljevid deležev dostopanja do interneta po državah', message=FALSE, warning=FALSE, results='hide', width = 50, height = 30}
 tm_shape(merge(zemljevid,
                povprecni_delez_dostopa %>% group_by(drzava),
                by.x="SOVEREIGNT", by.y="drzava"), xlim=c(-25,32), ylim=c(32,72)) +
 tm_polygons("povprecje") + 
-tm_layout(main.title = "Povprečni deleži dostopanja do interneta držav EU")
+tm_layout(main.title = "Države po deležih dostopanja")
 ```
 
-V prvem delu me je zanimalo tudi, zaradi kakšnih razlogov prebivalci držav ne dostopajo do interneta. Tako spodnja grafa prikazujeta povprečen delež posameznega razloga, zaradi katerega države ne dostopajo do interneta, ter kako so se deleži glavnih treh razlogov spreminjali skozi obdobje prek 4 let.
+V prvem delu me je zanimalo tudi, zaradi kakšnih razlogov prebivalci držav ne dostopajo do interneta. Tako spodnja grafa prikazujeta povprečen delež posameznega razloga, zaradi katerega države ne dostopajo do interneta, ter kako so se deleži glavnih treh razlogov spreminjali skozi opazovano obdobje.
 
 ```{r grafi_nedostopanje, echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, results='hide'}
 #grafa deležev razlogov za nedostopanje do interneta
@@ -148,8 +154,9 @@ print(graf2a)
 print(graf2b)
 ```
 
-Kot lahko razberemo iz grafov je bil daleč najbolj pomemben razlog za nedostopanje do interneta to, da so bili prebivalci mnenja da interneta ne potrebujejo. Sledili so pomankanje spretnosti, predraga oprema in previsoki stroški. Hkrati lahko opazimo, da je najmanj pogosto razlog za nedostopanje interneta ta, da na območju ni dostopa, kar nam pove, da so države skozi opazovano obdobje v večini omogočale dostopanje do interneta svojim prebivalcem, vendar te v večini zanj niso bili zainteresirani. Hkrati pa lahko iz drugega grafa razberemo, da se je delež prebivalstva, ki do interneta niso dostopali, ker so menili da ni potreben zmanjševal najhitreje od vseh 3 glavnih razlogov - iz dobrih 20 % je padel na dobrih 5 %, medtem ko sta razloga kot sta pomanjkanje spretnosti in predraga oprema padala bistveno počasneje.
+Kot lahko razberemo iz grafov je bil daleč najbolj pomemben razlog za nedostopanje do interneta to, da so bili prebivalci mnenja, da interneta ne potrebujejo. Sledili so pomankanje spretnosti, predraga oprema in previsoki stroški. Hkrati lahko opazimo, da je najmanj pogosto razlog za nedostopanje do interneta ta, da na območju ni dostopa, kar nam pove, da so države skozi opazovano obdobje v večinoma omogočale dostopanje do interneta svojim prebivalcem, vendar te v večini zanj niso bili zainteresirani. Hkrati pa lahko iz drugega grafa razberemo, da se je delež prebivalstva, ki do interneta niso dostopali, ker so menili da ni potreben zmanjševal najhitreje od vseh 3 glavnih razlogov - iz dobrih 20 % je padel na dobrih 5 %, medtem ko sta razloga kot sta pomanjkanje spretnosti in predraga oprema padala nekoliko počasneje.
 
+## Uporaba interneta
 
 V drugem delu projekta me je zanimalo, za katere aktivnosti uporabljajo prebivalci evropskih držav internet. Spodnja grafa predstavljata povprečne deleže aktivnosti, za katere uporabljajo posamezniki internet, ter primerjavo deležev glavnih aktivnosti pri uporabi interneta skozi leta.
 
@@ -169,11 +176,13 @@ tm_shape(merge(zemljevid,
                aktivnosti_po_drzavah_v_letu_2019 %>% group_by(drzava),
                by.x="SOVEREIGNT", by.y="drzava"), xlim=c(-25,32), ylim=c(32,72)) +
 tm_polygons("aktivnost", palette = "Pastel1") + 
-tm_layout(main.title = "Najpogostejši razlogi za uporabo interneta")
+tm_layout(main.title = "Države po aktivnostih")
 ```
 
 Kot lahko iz mape opazimo, je najbolj razširjena aktivnost po Evropi uporaba e-pošte, v večini srednje in severno evropskih držav je to še vedno najpogostejši razlog uporabe interneta. Sledita pa uporaba interneta za izmenjevanje sporočil (prek aplikacij kot je Messenger) in pridobivanje informacij o proizvodih in storitvah, ki sta najbolj popularni aktivnosti v bolj južnih in jugovzhodnih državah.
 
+
+## Digitalno znanje
 
 V tretjem delu mojega projekta, sem želel države primerjati glede na znanje o uporabi interneta in digitalnih tehnologij, ki jih imajo njihovi državljani, ter primerjati znanje uporabe med moškimi in ženskami.
 
@@ -184,17 +193,19 @@ print(graf4b)
 
 Zgornji graf prikazuje primerjavo povprečnega nivoja znanja med moškimi in ženskami starimi med 16 in 74 let v letu 2019. Iz grafa je jasno vidno, da ima velika večina prebivalcev vsaj osnovno znanje o uporabi digitalnih tehnologij - torej uporabljajo računalnik ali telefon za kakšno izmed že navedenih aktivnosti. Graf nam pove, da je v današnjem času razlika med znanjem uporabe interneta moških in žensk zelo minimalna. Čeprav je moških, katerih znanje je nadpovprečno nekoliko več kot žensk, je žensk, ki imajo vsaj nizko ali osnovno znanje nekoliko več. To nam kaže vedno bolj enakovredno družbo in enostavno uporabo komunkacijskih tehnologij, saj razlik med spoloma pri uporabi tako rekoč ni.
 
-Bolj zanimiva pa je primerjava držav po deležih državljanov, ki znajo komunikacijske in informacijske tehnologije uporabljati nadpovprečno dobro, še posebej med najbolj in najmanj razvitimi državami.
+Bolj zanimiva pa je primerjava držav po deležih državljanov, ki znajo komunikacijske in informacijske tehnologije uporabljati nadpovprečno dobro, še posebej med najbolj in najmanj digitalno razvitimi državami.
 
 ```{r grafi_znanje2, echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, results='hide'}
 #graf znanja uporabe komunikacijskih in informacijskih tehnologij po državah
 print(graf4c)
 ```
 
-Kot lahko vidimo iz zgornjega grafa je razlika med državami precejšnja. Ponovno se med najboljše uvrščajo Islandija, Nizozemska in Norveška, v katerih je v letu 2019 več kot polovica državaljanov znala uporabljati tehnologijo nadpovprečno dobro. Med države z najslabšo pismenostjo uporabe tehnologije se uvrščajo Bolgarija, Romunija in Severna Makedonija, vse med 10 in 15 odstotki v letu 2019. Do takšnih razlik nedvomno pride zaradi različnih možnosti dostopanja do interneta, saj se je v slednjih državah internet bolj aktivno začel razvijati šele v zadnjih letih, ko so ga druge države ponujale že skoraj celotni svoji populaciji. 
+Kot lahko vidimo iz zgornjega grafa je razlika med državami precejšnja. Ponovno se med najboljše uvrščajo Islandija, Nizozemska in Norveška, v katerih je v letu 2019 več kot polovica državaljanov znala uporabljati tehnologijo nadpovprečno dobro. Med države z najslabšo pismenostjo pri uporabi digialne tehnologije se uvrščajo Bolgarija, Romunija in Severna Makedonija, vse med 10 in 15 odstotki v letu 2019. Do takšnih razlik nedvomno pride zaradi različnih možnosti dostopanja do interneta, saj se je v slednjih državah internet bolj aktivno začel razvijati šele v zadnjih letih, ko so ga druge države ponujale že skoraj celotni svoji populaciji. 
 
 
-V zadnjem, četrtem delu svojega projekta sem želel evropske države analizirati, glede na komunikacijo prebivalcev z oblastmi prek informacijskih tehnologij
+## Komunikacija z oblastmi
+
+V zadnjem, četrtem delu svojega projekta sem želel evropske države analizirati, glede na komunikacijo prebivalcev z oblastmi prek informacijskih tehnologij.
 
 ```{r grafi_komunikacija, echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, results='hide'}
 #grafa primerjave komunikacije državljanov z oblastmi
@@ -202,8 +213,8 @@ print(graf5a)
 print(graf8)
 ```
 
-Kot lahko opazimo iz prvega grafa, se med držav, katerih prebivalci najbolj komunicirajo z oblastmi pričakovano uvrščajo uvrščajo Danska, Islandija in Norveška. Kot smo ugotovili že v prejšnjih delih projekta, so to države z največjim deležem dostopom do interneta, največjo digitalno pismenostjo prebivalstva in imajo zato verjetno veliko večjo možnost uporabe interneta pri urejanji uradnih zadev, kot so izpolnjevanje in oddajanje raznih obrazcev. Med države z najnižjo stopnjo komunikacijo z oblastmi pa sodijo ponovno Bolgarija, Romunija in Severna Makedonija - verjetno zaradi podobnih razlogov, nemožnost dostopanja do interneta ter digitalna nepismenost prebivalstva.
-V drugem grafu lahko primerjamo rasti držav z največjo in najmanjšo rastjo. Zelo zanimivo je, da države z najmanjšo rastjo (Bolgarija, Italija, Nemčija) niso nujno države z majhnim dostopom do interneta ali digitalno nepismenostjo prebivalstva, vendar je razlog za majhno rast nezainteresiranost oblasti za vzpostavitev primernih internetnih strani. Po drugi strani pa pri državah z največjo rastjo (Danska, estonija, Latvija) opazimo, da to niso nujno digitalno najbolj razvite države, vendar se jim pri razvoju hitro približujejo, vse pa so imele v opazovanem obdobju vsaj en velik skok pri digitalizaciji komunikacije z državo, verjetno so takrat vspostavile večino strani in modernizirale oddajanje in urejanje uradnih dokumentov prek interneta.
+Kot lahko opazimo iz prvega grafa, se med državami, katerih prebivalci najbolj komunicirajo z oblastmi pričakovano uvrščajo uvrščajo Danska, Islandija in Norveška. Kot smo ugotovili že v prejšnjih delih projekta, so to države z največjim deležem dostopa do interneta, največjo digitalno pismenostjo prebivalstva in imajo zato verjetno veliko večjo možnost uporabe interneta pri urejanju uradnih zadev, kot so izpolnjevanje in oddajanje raznih obrazcev. Med države z najnižjo stopnjo komunikacije z oblastmi pa sodijo ponovno Bolgarija, Romunija in Severna Makedonija - verjetno zaradi podobnih razlogov, nemožnost dostopanja do interneta ter digitalna nepismenost prebivalstva.
+V drugem grafu lahko primerjamo rasti držav z največjo in najmanjšo rastjo. Zelo zanimivo je, da države z najmanjšo rastjo (Bolgarija, Italija, Nemčija) niso nujno države z majhnim dostopom do interneta ali digitalno nepismenostjo prebivalstva, verjetno je razlog za majhno rast nezainteresiranost oblasti za vzpostavitev primernih internetnih strani. Po drugi strani pa pri državah z največjo rastjo (Danska, estonija, Latvija) opazimo, da to niso nujno digitalno najbolj razvite države, vendar se jim pri razvoju hitro približujejo, vse pa so imele v opazovanem obdobju vsaj en velik skok pri digitalizaciji komunikacije z državo, verjetno so takrat vspostavile večino strani in modernizirale oddajanje in urejanje uradnih dokumentov prek interneta.
 
 Napoved komunikacije državljanov z oblastmi si lahko ogledamo v spodnjem grafu.
 
@@ -212,7 +223,7 @@ Napoved komunikacije državljanov z oblastmi si lahko ogledamo v spodnjem grafu.
 print(graf8a)
 ```
 
-Iz grafa lahko razberemo, da bodo države podobno kot pri napovedi dostopanja do interneta svojo rast v prihodnje nadaljevale precej konstantno - vsako leto bo več sredstev in večja potreba po digitalizirani komunikaciji in spletnem upravljanju upravnih storitev. Tako je napoved do leta 2025 s približnim enakim naklonom kot do sedaj, vendar se bo pri državah kot so Danska, ki že imajo zelo velik odstotek komunikacije z oblastmi ta naklon začel manjšati z leti, saj bodo vedno bližje popolni digitalizaciji uprave. Pri državah z nižjo stopnjo dostopanja do interneta in nižjo digitalno pismenostjo, pa bo proces digitalizacije vzel nekoliko več časa, saj bodo morale najprej zagotoviti dostop do interneta čim večjemu številu prebivalcev, šele nato se bo lahko povečal tudi delež komuniciranja z državo prek informacijskih tehnologij.
+Iz grafa lahko razberemo, da bodo države podobno kot pri napovedi dostopanja do interneta svojo rast v prihodnje nadaljevale precej konstantno - vsako leto bo več sredstev in večja potreba po digitalizirani komunikaciji in spletnem upravljanju upravnih storitev. Tako je napoved do leta 2025 za digitalno manj razbite države približno enak naklon kot do sedaj, pri državah kot so Danska, ki že imajo zelo velik odstotek komunikacije z oblastmi, pa se bo ta naklon začel manjšati z leti, saj bodo vedno bližje popolni digitalizaciji uprave. Pri državah z nižjo stopnjo dostopanja do interneta in nižjo digitalno pismenostjo, pa bo proces digitalizacije vzel nekoliko več časa, saj bodo morale najprej zagotoviti dostop do interneta čim večjemu številu prebivalcev, šele nato se bo lahko povečal tudi delež komuniciranja z državo prek informacijskih tehnologij.
 
 V tem delu naloge me je tudi zanimalo, s kakšnim namenom uporabljajo prebivalci držav internet za komunikacijo z državo. Ker vse države nimajo dovolj podatkov za različne tipe komunikacij, sem se osredotočil na prenos uradnih obrazcev, oddajanje izpolnjenih obrazcev ter pridobivanje podatkov s spletnih strani.
 
@@ -234,11 +245,12 @@ tm_shape(merge(zemljevid,
               nameni_po_drzavah_v_letu_2019 %>% group_by(drzava),
               by.x="SOVEREIGNT", by.y="drzava"), xlim=c(-25,32), ylim=c(32,72)) +
 tm_polygons("namen", palette = "Pastel1") + 
-tm_layout(main.title = "Najpogostejši nameni za komuniciranje z državo")
+tm_layout(main.title = "Države po komunikaciji")
 ```
 
 Iz grafa je jasno razvidno, da je glavni namen komunikacije večine evropskih držav z oblastmi pridobivanje podatkov iz spletnih strani. To je logično, saj verjetno večina držav še nima zelo razvite e-uprave oziroma je večina državljanov ne uporablja, hkrati pa države omogočajo dostop do večine podatkov, ki so potrebni za urejanje uradne dokumentacije prek spleta, kar je očitno za večino prebivalcev najbolj pomembno.
 
+# Shiny
 
 ```{r shiny, echo=FALSE}
 shinyAppDir("shiny", options=list(width="100%", height=600))

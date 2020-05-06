@@ -13,7 +13,7 @@ zemljevid <- zemljevid[zemljevid$CONTINENT == "Europe",]
 graf1 <- ggplot(data=dostop_do_interneta %>% mutate(drzava=slovar[drzava]), aes(x=leto, y=delez, col=drzava)) + 
          geom_point() + geom_line() + 
          ylab('delež v %') + ggtitle('Dostop do interneta') + scale_x_continuous(breaks = 1*2007:2019) + 
-         labs(fill = "Država")
+         labs(fill = "Država") + theme(axis.text.x=element_text(angle=45, vjust=0.5, hjust=1))
 
 povprecni_delez_dostopa <- dostop_do_interneta %>% 
                            group_by(drzava) %>%
@@ -110,7 +110,7 @@ aktivnosti_po_letih$leto <- as.character(aktivnosti_po_letih$leto)
 
 graf3b <- ggplot(data=aktivnosti_po_letih, aes(x=uporaba, y=delez, fill=leto)) + 
           geom_col(position = "dodge2") + ggtitle('Delež glavnih aktivnosti pri uporabi interneta') + 
-          ylab('deleži v %') + xlab('aktivnost')
+          ylab('deleži v %') + xlab('aktivnost') + theme(axis.text.x=element_text(angle=90, vjust=0.5, hjust=1))
 
 aktivnosti_po_drzavah_v_letu_2019 <- internetne_aktivnosti %>%
                                      group_by(drzava) %>%
