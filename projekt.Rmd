@@ -237,8 +237,10 @@ Zanimal pa me je tudi kateri je najpogostejši namen v posamezni državi, s kate
 
 ```{r grafi_nameni2, echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, results='hide'}
 #graf najpostejših namenov za komuniciranje z državo prek interneta po državah
-print(graf6b)
+print(graf6c)
 ```
+
+Iz grafa je jasno razvidno, da je glavni namen komunikacije večine evropskih držav z oblastmi pridobivanje podatkov iz spletnih strani. To je logično, saj verjetno večina držav še nima zelo razvite e-uprave oziroma je večina državljanov ne uporablja, hkrati pa države omogočajo dostop do večine podatkov, ki so potrebni za urejanje uradne dokumentacije prek spleta, kar je očitno za večino prebivalcev najbolj pomembno.
 
 ```{r zemljevid3, echo=FALSE, fig.align='center', fig.cap='Zemljevid najpogostejših namenov za komunciranje z državo', message=FALSE, warning=FALSE, results='hide'}
 tm_shape(merge(zemljevid,
@@ -248,7 +250,7 @@ tm_polygons("namen", palette = "Pastel1") +
 tm_layout(main.title = "Države po komunikaciji")
 ```
 
-Iz grafa je jasno razvidno, da je glavni namen komunikacije večine evropskih držav z oblastmi pridobivanje podatkov iz spletnih strani. To je logično, saj verjetno večina držav še nima zelo razvite e-uprave oziroma je večina državljanov ne uporablja, hkrati pa države omogočajo dostop do večine podatkov, ki so potrebni za urejanje uradne dokumentacije prek spleta, kar je očitno za večino prebivalcev najbolj pomembno.
+Iz zemljevida pa lahko razberemo, da je najpogostejši namen komunikacije oddajanje izpolnjenih obrazcev v bolj zahdonem delu Evrope, medtem ko večina ostalih držav najpogosteje komunicira z oblastmi s pridobivanjem podatkov iz spletnih strani.
 
 # Shiny
 

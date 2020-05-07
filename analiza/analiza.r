@@ -15,7 +15,8 @@ graf7 <- ggplot(primerjava_rasti_log %>% filter(drzava %in% c("Islandija", "Nizo
   geom_point() + ggtitle("Primerjava rasti držav z največjo in najmanjšo rastjo") + 
   xlab("leto") + ylab("delež v %") + facet_grid(. ~ drzava) + stat_smooth(method="lm") +
   coord_trans(y=logisticna_trans) + scale_y_continuous(breaks=logisticna_breaks,
-                                                       labels=logisticna)
+                                                       labels=logisticna) + 
+  theme(axis.text.x=element_text(angle=45, vjust=0.5, hjust=1))
 
 
 bolgarija = c('Bolgarija')

@@ -223,7 +223,8 @@ povprecen_delez_namena$delez <- round(povprecen_delez_namena$delez, 2)
 
 graf6a <- ggplot(data=povprecen_delez_namena, aes(x=namen.uporabe, y=delez, fill=namen.uporabe)) + geom_col() +
           ggtitle('Povprečen delež posameznega namena komunikacije z državo') + 
-          ylab('delež v %') + xlab('namen uporabe') + theme(axis.text.x = element_blank())
+          ylab('delež v %') + xlab('namen uporabe') + theme(axis.text.x = element_blank()) +
+          theme(axis.text.x=element_text(angle=45, vjust=0.5, hjust=1))
 
 nameni_po_letih <- namen_uporabe_interneta_za_komunikacijo_z_drzavo %>%
                    group_by(leto, namen.uporabe) %>%
@@ -235,7 +236,8 @@ nameni_po_letih$leto <- as.character(nameni_po_letih$leto)
 graf6b <- ggplot(data=nameni_po_letih, aes(x=namen.uporabe)) + 
           geom_col(aes(y=delez, fill=leto), position = "dodge2") +
           ggtitle('Delež glavnih namenov za komunikacijo z državo') + 
-          ylab('deleži v %') + xlab('namen uporabe')
+          ylab('deleži v %') + xlab('namen uporabe') + 
+          theme(axis.text.x=element_text(angle=90, vjust=0.5, hjust=1))
 
 nameni_po_drzavah_v_letu_2019 <-  namen_uporabe_interneta_za_komunikacijo_z_drzavo %>%
                                   group_by(drzava) %>%
@@ -249,7 +251,8 @@ nameni_po_drzavah_v_letu_2019$namen[nameni_po_drzavah_v_letu_2019$namen == "3"] 
 
 graf6c <- ggplot(data=nameni_po_drzavah_v_letu_2019 %>% mutate(drzava=slovar[drzava]), aes(x=namen)) + geom_bar(aes(fill=drzava)) +
           ggtitle('Najpogostejši nameni za komuniciranje z državo prek interneta') + 
-          ylab('število držav') + xlab('namen')
+          ylab('število držav') + xlab('namen') + 
+          theme(axis.text.x=element_text(angle=90, vjust=0.5, hjust=1))
 
 zemljevid3 <- tm_shape(merge(zemljevid,
                              nameni_po_drzavah_v_letu_2019 %>% group_by(drzava),
