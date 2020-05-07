@@ -95,7 +95,7 @@ graf3a <- ggplot(data=povprecen_delez_aktivnosti, aes(x=uporaba, y=delez, fill=u
           ggtitle('Povprečen delež internetnih aktivnosti') + 
           ylab('delež v %') + xlab('aktivnost') + theme(axis.text.x = element_blank())
 
-aktivnosti_po_letih <- internetne_aktivnosti %>%
+aktivnosti_po_letih <- internetne_aktivnosti %>% mutate(leto=factor(leto)) %>%
                        filter(uporaba %in% c("branje novic", "posiljanje/prejemanje e-poste", 
                                             "poslusanje glasbe", 
                                             "pridobivanje informacij o proizvodih in storitvah",
@@ -105,7 +105,6 @@ aktivnosti_po_letih <- internetne_aktivnosti %>%
                                             summarise(mean(delez, na.rm = TRUE))
 names(aktivnosti_po_letih)[names(aktivnosti_po_letih) == "mean(delez, na.rm = TRUE)"] <- "delez"
 aktivnosti_po_letih$delez <- round(aktivnosti_po_letih$delez, 2)
-aktivnosti_po_letih$delez[aktivnosti_po_letih$delez == "NaN"] <- "0"
 aktivnosti_po_letih$leto <- as.character(aktivnosti_po_letih$leto)
 
 graf3b <- ggplot(data=aktivnosti_po_letih, aes(x=uporaba, y=delez, fill=leto)) + 

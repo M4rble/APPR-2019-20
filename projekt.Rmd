@@ -235,7 +235,7 @@ print(graf6b)
 Iz zgornjega grafa lahko vidimo, da se je povprečni delež vseh namenov skozi leta vztrajno dvigoval, kar pomeni, da se evropske državne oblasti vedno bolj digitalizirajo, vendar so še vedno vsi deleži pod 50 %, kar pomeni, da jh veliko še vedno ni digitaliziranih in imajo veliko možnosti za izboljšanje.
 Zanimal pa me je tudi kateri je najpogostejši namen v posamezni državi, s katerim državljani komunicirajo z oblastmi, kar kažeta spodnji graf in zemljevid.
 
-```{r grafi_nameni2, echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, results='hide'}
+```{r grafi_nameni2, echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, results='hide', fig.width=8, fig.height=8}
 #graf najpostejših namenov za komuniciranje z državo prek interneta po državah
 print(graf6c)
 ```
